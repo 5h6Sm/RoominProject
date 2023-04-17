@@ -14,39 +14,40 @@
 
             <ImageView
                 android:id="@+id/logo"
-                android:layout_width="103dp"
-                android:layout_height="39dp"
-                android:layout_marginLeft="20dp"
+                android:layout_width="77.7dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="25dp"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/logo" />
 
             <ImageView
                 android:id="@+id/alram"
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="346dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="25dp"
                 android:layout_marginTop="20dp"
+                android:layout_gravity="right"
                 android:src="@drawable/mypagealram" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="89dp"
                 android:fontFamily="@font/gmarketsansbold"
                 android:text="MY"
                 android:textColor="#494949"
-                android:textSize="30dp" />
+                android:textSize="24dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="150dp"
+                android:layout_marginTop="130dp"
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="52dp"
-                    android:layout_height="52dp"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
                     android:layout_marginLeft="10dp"
                     android:src="@drawable/round_button_3" />
 
@@ -57,23 +58,24 @@
                     android:layout_marginLeft="25dp"
                     android:fontFamily="@font/gmarketsansmedium"
                     android:text="이루다"
-                    android:textSize="19dp" />
+                    android:textColor="#494949"
+                    android:textSize="16dp" />
 
                 <LinearLayout
                     android:layout_width="75dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="150dp"
+                    android:layout_marginLeft="120dp"
                     android:background="@drawable/backboxgray">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="12dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="15dp"
                         android:fontFamily="@font/gmarketsansmedium"
                         android:text="수정하기"
-                        android:textSize="13dp"
+                        android:textSize="12dp"
                         android:textColor="#FBFBFB" />
                 </LinearLayout>
             </LinearLayout>
@@ -81,7 +83,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="250dp"
+                android:layout_marginTop="210dp"
                 android:padding="10dp">
 
                 <ImageView
@@ -110,7 +112,7 @@
                     android:textColor="#434343" />
             </LinearLayout>
             <View
-                android:layout_marginTop="310dp"
+                android:layout_marginTop="270dp"
                 android:layout_width="380dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_height="1dp"
@@ -121,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gmarketsansmedium"
                 android:text="내역"
-                android:layout_marginTop="330dp"
+                android:layout_marginTop="290dp"
                 android:layout_marginLeft="20dp"
                 android:textColor="#A4A4A4"
                 android:textSize="15dp" />
@@ -129,7 +131,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="350dp"
+                android:layout_marginTop="310dp"
                 android:padding="10dp">
 
                 <ImageView
@@ -151,7 +153,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="400dp"
+                android:layout_marginTop="365dp"
                 android:padding="10dp">
 
                 <ImageView
@@ -175,7 +177,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gmarketsansmedium"
                 android:text="설정"
-                android:layout_marginTop="480dp"
+                android:layout_marginTop="440dp"
                 android:layout_marginLeft="20dp"
                 android:textColor="#A4A4A4"
                 android:textSize="15dp" />
@@ -183,7 +185,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="500dp"
+                android:layout_marginTop="460dp"
                 android:padding="10dp">
 
                 <ImageView
@@ -205,7 +207,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="550dp"
+                android:layout_marginTop="515dp"
                 android:padding="10dp">
 
                 <ImageView
@@ -229,7 +231,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gmarketsansmedium"
                 android:text="기타"
-                android:layout_marginTop="620dp"
+                android:layout_marginTop="590dp"
                 android:layout_marginLeft="20dp"
                 android:textColor="#A4A4A4"
                 android:textSize="15dp" />
@@ -237,7 +239,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="640dp"
+                android:layout_marginTop="610dp"
                 android:padding="10dp">
 
                 <ImageView
@@ -259,7 +261,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="690dp"
+                android:layout_marginTop="665dp"
                 android:padding="10dp">
 
                 <ImageView
@@ -280,7 +282,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="740dp"
+                android:layout_marginTop="720dp"
                 android:padding="10dp">
 
                 <ImageView
@@ -301,7 +303,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="790dp"
+                android:layout_marginTop="775dp"
                 android:padding="10dp">
 
                 <ImageView

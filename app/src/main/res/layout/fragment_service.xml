@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
@@ -23,34 +22,35 @@
 
                     <ImageView
                         android:id="@+id/logo"
-                        android:layout_width="103dp"
-                        android:layout_height="39dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_width="77.7dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="25dp"
                         android:layout_marginTop="20dp"
                         android:src="@drawable/logo" />
 
                     <ImageView
                         android:id="@+id/alram"
-                        android:layout_width="40dp"
-                        android:layout_height="30dp"
-                        android:layout_marginLeft="346dp"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="25dp"
                         android:layout_marginTop="20dp"
-                        android:src="@drawable/alram" />
+                        android:src="@drawable/alram2" />
 
                     <TextView
                         android:layout_width="138dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
-                        android:layout_marginTop="95dp"
+                        android:layout_marginTop="75dp"
                         android:fontFamily="@font/gmarketsansbold"
                         android:text="모든 서비스"
                         android:textColor="#494949"
-                        android:textSize="26sp" />
+                        android:textSize="24sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="125dp"
+                        android:layout_marginTop="105dp"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
@@ -61,16 +61,16 @@
                             app:cardCornerRadius="18dp">
 
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="328dp"
+                                android:layout_height="56dp"
                                 android:backgroundTint="#F1E4E6"
                                 android:orientation="horizontal"
                                 android:padding="5dp">
 
                                 <ImageView
                                     android:id="@+id/image_view"
-                                    android:layout_width="30dp"
-                                    android:layout_height="31dp"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
                                     android:layout_gravity="center"
                                     android:layout_marginLeft="15dp"
                                     android:contentDescription="TODO"
@@ -84,19 +84,26 @@
                                     android:fontFamily="@font/gmarketsansmedium"
                                     android:text="모닝콜"
                                     android:textColor="#777777"
-                                    android:textSize="20sp" />
+                                    android:textSize="16dp" />
 
-                                <Button
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="48dp"
-                                    android:layout_gravity="left|center_vertical"
-                                    android:layout_marginLeft="10dp"
-                                    android:background="@drawable/round_button"
-                                    android:backgroundTint="#FBFBFB"
-                                    android:fontFamily="@font/gmarketsansmedium"
-                                    android:text="요청중"
-                                    android:textColor="#F28FA1"
-                                    android:textSize="18sp" />
+                                <LinearLayout
+                                    android:layout_width="51dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginLeft="18dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/round_bound"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="40dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/gmarketsansmedium"
+                                        android:text="요청중"
+                                        android:layout_marginLeft="7dp"
+                                        android:textColor="#F28FA1"
+                                        android:textSize="12dp" />
+                                </LinearLayout>
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
@@ -104,7 +111,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="195dp"
+                        android:layout_marginTop="175dp"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
@@ -115,16 +122,16 @@
                             app:cardCornerRadius="18dp">
 
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="328dp"
+                                android:layout_height="56dp"
                                 android:backgroundTint="#F1E4E6"
                                 android:orientation="horizontal"
                                 android:padding="5dp">
 
                                 <ImageView
                                     android:id="@+id/image_view2"
-                                    android:layout_width="30dp"
-                                    android:layout_height="31dp"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
                                     android:layout_gravity="center"
                                     android:layout_marginLeft="15dp"
                                     android:contentDescription="TODO"
@@ -132,18 +139,19 @@
 
                                 <TextView
                                     android:layout_width="198dp"
-                                    android:layout_height="24dp"
+                                    android:layout_height="22dp"
                                     android:layout_gravity="center"
                                     android:layout_marginLeft="10dp"
                                     android:fontFamily="@font/gmarketsansmedium"
                                     android:text="음료/주류"
                                     android:textColor="#777777"
-                                    android:textSize="20sp" />
+                                    android:textSize="16dp" />
 
                                 <LinearLayout
-                                    android:layout_width="82dp"
-                                    android:layout_height="45dp"
+                                    android:layout_width="40dp"
+                                    android:layout_height="28dp"
                                     android:layout_marginLeft="18dp"
+                                    android:layout_gravity="center_vertical"
                                     android:background="@drawable/round_button_2"
                                     android:orientation="horizontal">
 
@@ -151,11 +159,11 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_vertical"
-                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginLeft="8dp"
                                         android:fontFamily="@font/gmarketsansmedium"
                                         android:text="완료"
                                         android:textColor="#FBFBFB"
-                                        android:textSize="20dp" />
+                                        android:textSize="12dp" />
                                 </LinearLayout>
 
 
@@ -166,39 +174,41 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="300dp"
-                        android:layout_marginTop="290dp"
+                        android:layout_marginLeft="260dp"
+                        android:layout_marginTop="260dp"
                         android:background="@android:color/transparent"
                         android:fontFamily="@font/gmarketsansmedium"
-                        android:text="이용내역 보기 > "
-                        android:textColor="#A4A4A4" />
+                        android:text="이용내역 보기 &gt; "
+                        android:textColor="#A4A4A4"
+                        android:textSize="12dp" />
 
                     <TextView
                         android:layout_width="138dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="22dp"
-                        android:layout_marginTop="330dp"
+                        android:layout_marginTop="310dp"
                         android:fontFamily="@font/gmarketsansbold"
                         android:text="무료 서비스"
                         android:textColor="#494949"
-                        android:textSize="23sp" />
+                        android:textSize="20dp" />
 
                     <LinearLayout
-                        android:layout_width="217dp"
-                        android:layout_height="97dp"
-                        android:layout_marginTop="355dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="335dp"
+                        android:layout_gravity="left"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="56dp"
                             android:layout_margin="16dp"
                             android:backgroundTint="#FBFBFB"
                             app:cardCornerRadius="18dp">
 
                             <LinearLayout
-                                android:layout_width="190dp"
-                                android:layout_height="60dp"
+                                android:layout_width="150dp"
+                                android:layout_height="56dp"
                                 android:orientation="horizontal"
                                 android:padding="2dp">
 
@@ -206,37 +216,38 @@
                                     android:layout_width="37dp"
                                     android:layout_height="35dp"
                                     android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginLeft="15dp"
                                     android:src="@drawable/coffee" />
 
                                 <TextView
+                                    android:layout_marginLeft="10dp"
                                     android:layout_width="69dp"
                                     android:layout_height="18dp"
                                     android:layout_gravity="center"
                                     android:fontFamily="@font/gmarketsansmedium"
                                     android:text="욕실용품"
-                                    android:textSize="16sp" />
+                                    android:textSize="16dp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="217dp"
-                        android:layout_height="103dp"
-                        android:layout_marginTop="355dp"
-                        android:layout_marginLeft="195dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="335dp"
+                        android:layout_gravity="right"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="56dp"
                             android:layout_margin="16dp"
                             android:backgroundTint="#FBFBFB"
                             app:cardCornerRadius="18dp">
 
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="62dp"
+                                android:layout_width="150dp"
+                                android:layout_height="56dp"
                                 android:orientation="horizontal"
                                 android:padding="2dp">
 
@@ -244,30 +255,30 @@
                                     android:layout_width="37dp"
                                     android:layout_height="35dp"
                                     android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginLeft="15dp"
                                     android:src="@drawable/sleep" />
 
                                 <TextView
                                     android:layout_width="69dp"
                                     android:layout_height="18dp"
-                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginLeft="10dp"
                                     android:layout_gravity="center"
                                     android:fontFamily="@font/gmarketsansmedium"
                                     android:text="차/커피"
-                                    android:textSize="16sp" />
+                                    android:textSize="16dp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="217dp"
-                        android:layout_height="103dp"
-                        android:layout_marginTop="430dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="410dp"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="56dp"
                             android:layout_margin="16dp"
                             android:backgroundTint="#FBFBFB"
                             app:cardCornerRadius="18dp">
@@ -282,37 +293,38 @@
                                     android:layout_width="37dp"
                                     android:layout_height="35dp"
                                     android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginLeft="15dp"
                                     android:src="@drawable/unbrella" />
 
                                 <TextView
                                     android:layout_width="69dp"
                                     android:layout_height="18dp"
-                                    android:layout_gravity="center"
+                                    android:layout_gravity="center_vertical"
                                     android:fontFamily="@font/gmarketsansmedium"
                                     android:text="침구류"
-                                    android:textSize="16sp" />
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="16dp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="217dp"
-                        android:layout_height="103dp"
-                        android:layout_marginTop="430dp"
-                        android:layout_marginLeft="195dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="410dp"
+                        android:layout_gravity="right"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="56dp"
                             android:layout_margin="16dp"
                             android:backgroundTint="#FBFBFB"
                             app:cardCornerRadius="18dp">
 
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="62dp"
+                                android:layout_width="150dp"
+                                android:layout_height="56dp"
                                 android:orientation="horizontal"
                                 android:padding="2dp">
 
@@ -330,20 +342,20 @@
                                     android:fontFamily="@font/gmarketsansmedium"
                                     android:text="우산대여"
                                     android:layout_marginLeft="16dp"
-                                    android:textSize="16sp" />
+                                    android:textSize="16dp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="217dp"
-                        android:layout_height="103dp"
-                        android:layout_marginTop="510dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="490dp"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="56dp"
                             android:layout_margin="16dp"
                             android:backgroundTint="#FBFBFB"
                             app:cardCornerRadius="18dp">
@@ -367,21 +379,21 @@
                                     android:layout_gravity="center"
                                     android:fontFamily="@font/gmarketsansmedium"
                                     android:text="아기용품"
-                                    android:textSize="16sp" />
+                                    android:textSize="16dp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="217dp"
-                        android:layout_height="103dp"
-                        android:layout_marginTop="510dp"
-                        android:layout_marginLeft="195dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="490dp"
+                        android:layout_gravity="right"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="56dp"
                             android:layout_margin="16dp"
                             android:backgroundTint="#FBFBFB"
                             app:cardCornerRadius="18dp">
@@ -396,36 +408,37 @@
                                     android:layout_width="37dp"
                                     android:layout_height="35dp"
                                     android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginLeft="15dp"
                                     android:src="@drawable/call" />
 
                                 <TextView
                                     android:layout_width="69dp"
                                     android:layout_height="18dp"
                                     android:layout_gravity="center"
+                                    android:layout_marginLeft="10dp"
                                     android:fontFamily="@font/gmarketsansmedium"
                                     android:text="모닝콜"
-                                    android:textSize="16sp" />
+                                    android:textSize="16dp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="217dp"
-                        android:layout_height="103dp"
-                        android:layout_marginTop="600dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="580dp"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="56dp"
                             android:layout_margin="16dp"
                             android:backgroundTint="#FBFBFB"
                             app:cardCornerRadius="18dp">
 
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="62dp"
+                                android:layout_width="150dp"
+                                android:layout_height="56dp"
                                 android:orientation="horizontal"
                                 android:padding="2dp">
 
@@ -433,7 +446,7 @@
                                     android:layout_width="37dp"
                                     android:layout_height="35dp"
                                     android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginLeft="15dp"
                                     android:src="@drawable/cunciuzi" />
 
                                 <TextView
@@ -442,28 +455,29 @@
                                     android:layout_gravity="center"
                                     android:fontFamily="@font/gmarketsansmedium"
                                     android:text="컨시어지"
-                                    android:textSize="16sp" />
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="16dp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="217dp"
-                        android:layout_height="103dp"
-                        android:layout_marginTop="600dp"
-                        android:layout_marginLeft="195dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="580dp"
+                        android:layout_gravity="right"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="56dp"
                             android:layout_margin="16dp"
                             android:backgroundTint="#FBFBFB"
                             app:cardCornerRadius="18dp">
 
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="62dp"
+                                android:layout_width="150dp"
+                                android:layout_height="56dp"
                                 android:orientation="horizontal"
                                 android:padding="2dp">
 
@@ -471,7 +485,7 @@
                                     android:layout_width="37dp"
                                     android:layout_height="35dp"
                                     android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginLeft="15dp"
                                     android:src="@drawable/lugizi" />
 
                                 <TextView
@@ -480,7 +494,8 @@
                                     android:layout_gravity="center"
                                     android:fontFamily="@font/gmarketsansmedium"
                                     android:text="러기지"
-                                    android:textSize="16sp" />
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="16dp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
@@ -488,28 +503,28 @@
                         android:layout_width="138dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="22dp"
-                        android:layout_marginTop="710dp"
+                        android:layout_marginTop="690dp"
                         android:fontFamily="@font/gmarketsansbold"
                         android:text="유료 서비스"
                         android:textColor="#494949"
-                        android:textSize="23sp" />
+                        android:textSize="20dp" />
 
                     <LinearLayout
-                        android:layout_width="217dp"
-                        android:layout_height="97dp"
-                        android:layout_marginTop="755dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="715dp"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="56dp"
                             android:layout_margin="16dp"
                             android:backgroundTint="#FBFBFB"
                             app:cardCornerRadius="18dp">
 
                             <LinearLayout
-                                android:layout_width="190dp"
-                                android:layout_height="60dp"
+                                android:layout_width="150dp"
+                                android:layout_height="56dp"
                                 android:orientation="horizontal"
                                 android:padding="2dp">
 
@@ -517,30 +532,31 @@
                                     android:layout_width="37dp"
                                     android:layout_height="35dp"
                                     android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginLeft="15dp"
                                     android:src="@drawable/interate" />
 
                                 <TextView
                                     android:layout_width="69dp"
                                     android:layout_height="18dp"
+                                    android:layout_marginLeft="10dp"
                                     android:layout_gravity="center"
                                     android:fontFamily="@font/gmarketsansmedium"
                                     android:text="인터넷"
-                                    android:textSize="16sp" />
+                                    android:textSize="16dp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="217dp"
-                        android:layout_height="103dp"
-                        android:layout_marginTop="755dp"
-                        android:layout_marginLeft="195dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="715dp"
+                        android:layout_gravity="right"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="56dp"
                             android:layout_margin="16dp"
                             android:backgroundTint="#FBFBFB"
                             app:cardCornerRadius="18dp">
@@ -555,24 +571,25 @@
                                     android:layout_width="37dp"
                                     android:layout_height="35dp"
                                     android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginLeft="15dp"
                                     android:src="@drawable/minibar" />
 
                                 <TextView
                                     android:layout_width="69dp"
                                     android:layout_height="18dp"
+                                    android:layout_marginLeft="10dp"
                                     android:layout_gravity="center"
                                     android:fontFamily="@font/gmarketsansmedium"
                                     android:text="미니바"
-                                    android:textSize="16sp" />
+                                    android:textSize="16dp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="217dp"
-                        android:layout_height="103dp"
-                        android:layout_marginTop="830dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="800dp"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
@@ -583,8 +600,8 @@
                             app:cardCornerRadius="18dp">
 
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="62dp"
+                                android:layout_width="150dp"
+                                android:layout_height="56dp"
                                 android:orientation="horizontal"
                                 android:padding="2dp">
 
@@ -592,37 +609,38 @@
                                     android:layout_width="37dp"
                                     android:layout_height="35dp"
                                     android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginLeft="15dp"
                                     android:src="@drawable/washerclose" />
 
                                 <TextView
                                     android:layout_width="98dp"
                                     android:layout_height="22dp"
                                     android:layout_gravity="center"
+                                    android:layout_marginLeft="10dp"
                                     android:fontFamily="@font/gmarketsansmedium"
                                     android:text="세탁/빨래"
-                                    android:textSize="16sp" />
+                                    android:textSize="16dp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="217dp"
-                        android:layout_height="103dp"
-                        android:layout_marginTop="830dp"
-                        android:layout_marginLeft="195dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="800dp"
+                        android:layout_gravity="right"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="56dp"
                             android:layout_margin="16dp"
                             android:backgroundTint="#FBFBFB"
                             app:cardCornerRadius="18dp">
 
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="62dp"
+                                android:layout_width="150dp"
+                                android:layout_height="56dp"
                                 android:orientation="horizontal"
                                 android:padding="2dp">
 
@@ -630,29 +648,30 @@
                                     android:layout_width="37dp"
                                     android:layout_height="35dp"
                                     android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginLeft="15dp"
                                     android:src="@drawable/wine" />
 
                                 <TextView
-                                    android:layout_width="69dp"
-                                    android:layout_height="18dp"
+                                    android:layout_width="75dp"
+                                    android:layout_height="16dp"
                                     android:layout_gravity="center"
+                                    android:layout_marginLeft="10dp"
                                     android:fontFamily="@font/gmarketsansmedium"
                                     android:text="음료/주류"
-                                    android:textSize="16sp" />
+                                    android:textSize="16dp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="217dp"
-                        android:layout_height="103dp"
-                        android:layout_marginTop="920dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="890dp"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="56dp"
                             android:layout_margin="16dp"
                             android:backgroundTint="#FBFBFB"
                             app:cardCornerRadius="18dp">
@@ -667,7 +686,7 @@
                                     android:layout_width="37dp"
                                     android:layout_height="35dp"
                                     android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginLeft="15dp"
                                     android:src="@drawable/zimsave" />
 
                                 <TextView
@@ -676,21 +695,22 @@
                                     android:layout_gravity="center"
                                     android:fontFamily="@font/gmarketsansmedium"
                                     android:text="짐보관"
-                                    android:textSize="16sp" />
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="16dp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="217dp"
-                        android:layout_height="103dp"
-                        android:layout_marginTop="920dp"
-                        android:layout_marginLeft="195dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="890dp"
+                        android:layout_gravity="right"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="56dp"
                             android:layout_margin="16dp"
                             android:backgroundTint="#FBFBFB"
                             app:cardCornerRadius="18dp">
@@ -705,7 +725,7 @@
                                     android:layout_width="37dp"
                                     android:layout_height="35dp"
                                     android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginLeft="15dp"
                                     android:src="@drawable/spectifyday" />
 
                                 <TextView
@@ -714,20 +734,21 @@
                                     android:layout_gravity="center"
                                     android:fontFamily="@font/gmarketsansmedium"
                                     android:text="기념일"
-                                    android:textSize="16sp" />
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="16dp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="217dp"
-                        android:layout_height="103dp"
-                        android:layout_marginTop="1010dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="980dp"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="56dp"
                             android:layout_margin="16dp"
                             android:backgroundTint="#FBFBFB"
                             app:cardCornerRadius="18dp">
@@ -742,30 +763,31 @@
                                     android:layout_width="37dp"
                                     android:layout_height="35dp"
                                     android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginLeft="15dp"
                                     android:src="@drawable/taxi" />
 
                                 <TextView
                                     android:layout_width="69dp"
                                     android:layout_height="16dp"
                                     android:layout_gravity="center"
+                                    android:layout_marginLeft="10dp"
                                     android:fontFamily="@font/gmarketsansmedium"
                                     android:text="택시요청"
-                                    android:textSize="16sp" />
+                                    android:textSize="16dp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="217dp"
-                        android:layout_height="103dp"
-                        android:layout_marginTop="1010dp"
-                        android:layout_marginLeft="195dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="980dp"
+                        android:layout_gravity="right"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="56dp"
                             android:layout_margin="16dp"
                             android:backgroundTint="#FBFBFB"
                             app:cardCornerRadius="18dp">
@@ -780,7 +802,7 @@
                                     android:layout_width="37dp"
                                     android:layout_height="35dp"
                                     android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginLeft="15dp"
                                     android:src="@drawable/speaking" />
 
                                 <TextView
@@ -789,7 +811,8 @@
                                     android:layout_gravity="center"
                                     android:fontFamily="@font/gmarketsansmedium"
                                     android:text="통역"
-                                    android:textSize="16sp" />
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="16dp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
