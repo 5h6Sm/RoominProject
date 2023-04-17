@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:title="Home"
+        android:title="홈"
         android:enabled="true"
         android:id="@+id/menu_home"
         android:icon="@drawable/home" />
     <item
-        android:title="Home"
+        android:title="루민"
         android:enabled="true"
         android:id="@+id/menu_roomin"
         android:icon="@drawable/roominlogo2" />
     <item
-        android:title="Favorites"
+        android:title="서비스"
         android:enabled="true"
         android:id="@+id/menu_service"
         android:icon="@drawable/service" />
     <item
-        android:title="Email"
+        android:title="My"
         android:enabled="true"
         android:id="@+id/menu_my"
         android:icon="@drawable/my" />

@@ -26,7 +26,8 @@ class MainActivity : AppCompatActivity() {
                 when (it.itemId) {
                     R.id.menu_home -> HomeFragment()
                     R.id.menu_roomin -> RoominFragment()
-                    else -> ServiceFragment()
+                    R.id.menu_service -> ServiceFragment()
+                    else -> MyFragment()
                 }
             )
             true

@@ -33,10 +33,6 @@ android {
 }
 
 dependencies {
-//    classpath 'com.android.tools.build:gradle:4.1.0'
-//    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-//    classpath 'com.google.gms:google-services:4.3.4'
-
     implementation 'com.google.android.flexbox:flexbox:3.0.0'
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
