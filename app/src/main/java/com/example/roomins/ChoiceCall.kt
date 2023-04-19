@@ -35,33 +35,37 @@ class ChoiceCall : AppCompatActivity() {
             val checkBox3 = bottomSheetView.findViewById<CheckBox>(R.id.toggleButton3)
 
             // 체크박스 클릭 시 이벤트 처리
+// 체크박스 클릭 시 이벤트 처리
             checkBox1.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) {
+                    checkBox1.setBackgroundResource(R.drawable.toggle_button_clicked)
                     checkBox1.setTextColor(Color.parseColor("#FBFBFB"))
-                    checkBox1.setBackgroundColor(Color.parseColor("#DF8494"))
                 } else {
                     checkBox1.setTextColor(Color.parseColor("#D1D1D1"))
-                    checkBox1.setBackgroundColor(Color.parseColor("#F4F4F4"))
+                    checkBox1.setBackgroundResource(R.drawable.toggle_button_background)
                 }
             }
+
             checkBox2.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) {
                     checkBox2.setTextColor(Color.parseColor("#FBFBFB"))
-                    checkBox2.setBackgroundColor(Color.parseColor("#DF8494"))
+                    checkBox2.setBackgroundResource(R.drawable.toggle_button_clicked)
                 } else {
                     checkBox2.setTextColor(Color.parseColor("#D1D1D1"))
-                    checkBox2.setBackgroundColor(Color.parseColor("#F4F4F4"))
+                    checkBox2.setBackgroundResource(R.drawable.toggle_button_background)
                 }
             }
+
             checkBox3.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) {
                     checkBox3.setTextColor(Color.parseColor("#FBFBFB"))
-                    checkBox3.setBackgroundColor(Color.parseColor("#DF8494"))
+                    checkBox3.setBackgroundResource(R.drawable.toggle_button_clicked)
                 } else {
                     checkBox3.setTextColor(Color.parseColor("#D1D1D1"))
-                    checkBox3.setBackgroundColor(Color.parseColor("#F4F4F4"))
+                    checkBox3.setBackgroundResource(R.drawable.toggle_button_background)
                 }
             }
+
 
             // 다중 선택을 가능하도록 체크박스의 속성 변경
             checkBox1.isClickable = true

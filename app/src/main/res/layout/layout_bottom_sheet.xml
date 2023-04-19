@@ -11,32 +11,38 @@
         android:layout_height="wrap_content"
         android:id="@+id/choosetxt"
         android:textAlignment="center"
-        android:text="Choose"
+        android:text="서비스 요청서"
         android:textColor="#494949"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="20dp"
         android:textSize="18dp"
         android:fontFamily="@font/gmarketsansmedium"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="29dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="14dp"
+        android:textColor="#A4A4A4"
         android:text="시간 선택"
         android:textSize="12dp"
         android:fontFamily="@font/gmarketsansmedium"/>
+
     <TimePicker
-        android:layout_gravity="center"
         android:id="@+id/timePicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="285dp"
+        android:layout_height="144dp"
         android:layout_centerHorizontal="true"
-        android:timePickerMode="spinner" />
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:timePickerMode="spinner"
+        android:letterSpacing="-3"
+        ></TimePicker>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="수단 선택"
+        android:textColor="#A4A4A4"
         android:fontFamily="@font/gmarketsansmedium"
+        android:layout_marginLeft="29dp"
         android:textSize="12dp"/>
     <LinearLayout
         android:layout_marginTop="8dp"
@@ -49,7 +55,7 @@
             android:layout_width="92dp"
             android:layout_height="50dp"
             android:text="룸전화"
-            android:buttonTint="#D1D1D1"
+            android:textColor="#D1D1D1"
             android:background="@drawable/toggle_button_background"
             android:padding="8dp"
             android:layout_margin="8dp"
@@ -57,14 +63,13 @@
             android:radius="16dp"
             android:gravity="center"
             android:button="@null" />
-
         <CheckBox
             android:fontFamily="@font/gmarketsansmedium"
             android:id="@+id/toggleButton2"
             android:layout_width="92dp"
             android:layout_height="50dp"
             android:text="휴대폰"
-            android:buttonTint="#D1D1D1"
+            android:textColor="#D1D1D1"
             android:background="@drawable/toggle_button_background"
             android:padding="8dp"
             android:layout_margin="8dp"
@@ -79,7 +84,7 @@
             android:layout_width="92dp"
             android:layout_height="50dp"
             android:text="룸노크"
-            android:buttonTint="#D1D1D1"
+            android:textColor="#D1D1D1"
             android:background="@drawable/toggle_button_background"
             android:padding="8dp"
             android:layout_margin="8dp"
@@ -88,4 +93,54 @@
             android:gravity="center"
             android:button="@null" />
     </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#A4A4A4"
+        android:text="요청사항"
+        android:fontFamily="@font/gmarketsansmedium"
+        android:textSize="12dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="22dp"/>
+    <EditText
+        android:padding="10dp"
+        android:gravity="top|left"
+        android:layout_gravity="center"
+        android:background="@drawable/toggle_button_background"
+        android:layout_width="312dp"
+        android:layout_height="180dp"
+        android:hint="요청하실 사항을 적어주세요."
+        android:textColorHint="#D1D1D1"
+        android:layout_marginTop="10dp"
+        android:textSize="14dp"
+        />
+    
+    <TextView
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="184dp"
+        android:layout_height="32dp"
+        android:background="@drawable/toggle_button_background"
+        android:fontFamily="@font/gmarketsansmedium"
+        android:textSize="12dp"
+        android:layout_marginTop="18dp"
+        android:text="위와 같이 작성하시겠습니까?"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@drawable/round_button_3"
+        android:id="@+id/button_select"
+        android:layout_width="328dp"
+        android:layout_height="68dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:layout_marginTop="28dp"
+        android:textColor="#FBFBFB"
+        android:text="작성하기"
+        android:textSize="16dp"
+        android:fontFamily="@font/gmarketsansmedium"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 </LinearLayout>
