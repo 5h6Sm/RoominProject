@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/choosetxt"
+        android:textAlignment="center"
+        android:text="Choose"
+        android:textColor="#494949"
+        android:layout_marginTop="27dp"
+        android:textSize="18dp"
+        android:fontFamily="@font/gmarketsansmedium"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="20dp"
+        android:text="시간 선택"
+        android:textSize="12dp"
+        android:fontFamily="@font/gmarketsansmedium"/>
+    <TimePicker
+        android:layout_gravity="center"
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:timePickerMode="spinner" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="수단 선택"
+        android:fontFamily="@font/gmarketsansmedium"
+        android:textSize="12dp"/>
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:fontFamily="@font/gmarketsansmedium"
+            android:id="@+id/toggleButton1"
+            android:layout_width="92dp"
+            android:layout_height="50dp"
+            android:text="룸전화"
+            android:buttonTint="#D1D1D1"
+            android:background="@drawable/toggle_button_background"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:textSize="18sp"
+            android:radius="16dp"
+            android:gravity="center"
+            android:button="@null" />
+
+        <CheckBox
+            android:fontFamily="@font/gmarketsansmedium"
+            android:id="@+id/toggleButton2"
+            android:layout_width="92dp"
+            android:layout_height="50dp"
+            android:text="휴대폰"
+            android:buttonTint="#D1D1D1"
+            android:background="@drawable/toggle_button_background"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:textSize="18sp"
+            android:radius="16dp"
+            android:gravity="center"
+            android:button="@null" />
+
+        <CheckBox
+            android:fontFamily="@font/gmarketsansmedium"
+            android:id="@+id/toggleButton3"
+            android:layout_width="92dp"
+            android:layout_height="50dp"
+            android:text="룸노크"
+            android:buttonTint="#D1D1D1"
+            android:background="@drawable/toggle_button_background"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:textSize="18sp"
+            android:radius="16dp"
+            android:gravity="center"
+            android:button="@null" />
+    </LinearLayout>
+</LinearLayout>
