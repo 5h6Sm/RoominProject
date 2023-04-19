@@ -34,8 +34,9 @@
         android:layout_gravity="center"
         android:layout_marginTop="12dp"
         android:timePickerMode="spinner"
-        android:letterSpacing="-3"
-        ></TimePicker>
+        android:format24Hour="true"
+        android:letterSpacing="-3" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -116,6 +117,7 @@
         />
     
     <TextView
+        android:id="@+id/text_edit_noice"
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_width="184dp"

@@ -94,7 +94,7 @@
             android:text="2월 3일 오전 9:30"
             android:fontFamily="@font/gmarketsansmedium"
             android:textSize="16dp"
-            android:layout_marginLeft="120dp"
+            android:layout_marginLeft="107dp"
             android:layout_gravity="center_vertical"
             android:paddingTop="4dp"
             android:paddingBottom="4dp"
@@ -122,7 +122,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="65dp"
+            android:layout_marginLeft="60dp"
             android:background="@drawable/backgroundtext"
             android:fontFamily="@font/gmarketsansmedium"
             android:padding="7dp"
@@ -133,9 +133,9 @@
             android:layout_height="wrap_content"
             android:background="@drawable/backgroundtext"
             android:text="휴대폰"
+            android:layout_marginLeft="10dp"
             android:fontFamily="@font/gmarketsansmedium"
             android:textSize="16dp"
-            android:layout_marginLeft="15dp"
             android:layout_gravity="center_vertical"
             android:padding="7dp"/>
     </LinearLayout>
@@ -162,8 +162,9 @@
             android:text="없음"
             android:fontFamily="@font/gmarketsansmedium"
             android:textSize="16dp"
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="165dp"
             android:layout_gravity="center_vertical"
+            android:gravity="right"
             android:padding="7dp"/>
     </LinearLayout>
 

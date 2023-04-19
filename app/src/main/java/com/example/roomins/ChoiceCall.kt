@@ -3,12 +3,17 @@ package com.example.roomins
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.ListView
+import android.widget.TextView
 import android.widget.TimePicker
 import androidx.appcompat.widget.AppCompatButton
+import androidx.core.text.set
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class ChoiceCall : AppCompatActivity() {
@@ -28,6 +33,18 @@ class ChoiceCall : AppCompatActivity() {
             // bottomSheetDialog 호출
             bottomSheetDialog.show()
             timePicker = bottomSheetView.findViewById<TimePicker>(R.id.timePicker)
+
+            val text_edit_noice = bottomSheetView.findViewById<TextView>(R.id.text_edit_noice);
+
+            val content = text_edit_noice.text.toString();
+            val spannableString = SpannableString(content);
+
+            val world = "위와 같이"
+            val start = content.indexOf(world)
+            val end = start + world.length;
+            spannableString.setSpan(ForegroundColorSpan(Color.parseColor("#DF8494")), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+            text_edit_noice.setText(spannableString);
 
             // 체크박스 선언 및 초기화
             val checkBox1 = bottomSheetView.findViewById<CheckBox>(R.id.toggleButton1)
