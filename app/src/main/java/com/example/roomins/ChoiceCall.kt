@@ -48,12 +48,12 @@ class ChoiceCall : AppCompatActivity() {
             minute.descendantFocusability = NumberPicker.FOCUS_BLOCK_DESCENDANTS
 
             val calendar = Calendar.getInstance()
-            val today = calendar.get(Calendar.DAY_OF_WEEK)
+            var today = calendar.get(Calendar.DAY_OF_WEEK)
             var days = calendar.get(Calendar.DAY_OF_MONTH)
             var month = calendar.get(Calendar.MONTH) + 1
 
             //  최소값 설정
-            day.minValue = days
+            day.minValue = 1
             hour.minValue = 1
             minute.minValue = 1
 
@@ -62,14 +62,14 @@ class ChoiceCall : AppCompatActivity() {
             hour.maxValue = 24
             minute.maxValue = 59
 
-            val dayOfWeek = when(today) {
-                Calendar.SUNDAY -> "일요일"
-                Calendar.MONDAY -> "월요일"
-                Calendar.TUESDAY -> "화요일"
-                Calendar.WEDNESDAY -> "수요일"
-                Calendar.THURSDAY -> "목요일"
-                Calendar.FRIDAY -> "금요일"
-                Calendar.SATURDAY -> "토요일"
+            var dayOfWeek = when(today) {
+                0 -> "일요일"
+                1 -> "월요일"
+                2 -> "화요일"
+                3 -> "수요일"
+                4 -> "목요일"
+                5-> "금요일"
+                6 -> "토요일"
                 else -> ""
             }
 
@@ -77,11 +77,23 @@ class ChoiceCall : AppCompatActivity() {
             val dayDisplayedValues = mutableListOf<String>()
             for (i in 0 .. 30){
                 if(days == 31) {
-                    days = 0;
+                    days = 1;
                     month+=1;
+                }
+                if(today > 6) today = 0;
+                var dayOfWeek = when(today) {
+                    0 -> "일요일"
+                    1 -> "월요일"
+                    2 -> "화요일"
+                    3 -> "수요일"
+                    4 -> "목요일"
+                    5-> "금요일"
+                    6 -> "토요일"
+                    else -> ""
                 }
                 dayDisplayedValues.add("$month/$days($dayOfWeek)")
                 days++;
+                today++;
             }
             day.setDisplayedValues(dayDisplayedValues.toTypedArray())
             hour.setDisplayedValues(arrayOf("09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23","24", "01", "02", "03", "04", "05", "06", "07"))
