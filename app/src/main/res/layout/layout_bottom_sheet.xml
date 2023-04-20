@@ -27,15 +27,13 @@
         android:fontFamily="@font/gmarketsansmedium"/>
 
     <TimePicker
-        android:id="@+id/timePicker"
-        android:layout_width="285dp"
-        android:layout_height="144dp"
-        android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginTop="12dp"
-        android:timePickerMode="spinner"
-        android:format24Hour="true"
-        android:letterSpacing="-3" />
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:timePickerMode="spinner" />
 
     <TextView
         android:layout_width="wrap_content"
