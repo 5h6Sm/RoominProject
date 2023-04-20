@@ -49,8 +49,8 @@ class ChoiceCall : AppCompatActivity() {
 
             val calendar = Calendar.getInstance()
             val today = calendar.get(Calendar.DAY_OF_WEEK)
-            val days = calendar.get(Calendar.DAY_OF_MONTH)
-            val month = calendar.get(Calendar.MONTH) + 1
+            var days = calendar.get(Calendar.DAY_OF_MONTH)
+            var month = calendar.get(Calendar.MONTH) + 1
 
             //  최소값 설정
             day.minValue = days
@@ -59,7 +59,7 @@ class ChoiceCall : AppCompatActivity() {
 
             //  최대값 설정
             day.maxValue = 31
-            hour.maxValue = 23
+            hour.maxValue = 24
             minute.maxValue = 59
 
             val dayOfWeek = when(today) {
@@ -75,24 +75,19 @@ class ChoiceCall : AppCompatActivity() {
 
             //보여질 값 설정
             val dayDisplayedValues = mutableListOf<String>()
-            dayDisplayedValues.add("오늘($dayOfWeek)")
-            val tomorrowDayOfWeek = when((today+1)%7) {
-                Calendar.SUNDAY -> "일요일"
-                Calendar.MONDAY -> "월요일"
-                Calendar.TUESDAY -> "화요일"
-                Calendar.WEDNESDAY -> "수요일"
-                Calendar.THURSDAY -> "목요일"
-                Calendar.FRIDAY -> "금요일"
-                Calendar.SATURDAY -> "토요일"
-                else -> ""
+            for (i in 0 .. 30){
+                if(days == 31) {
+                    days = 0;
+                    month+=1;
+                }
+                dayDisplayedValues.add("$month/$days($dayOfWeek)")
+                days++;
             }
-            dayDisplayedValues.add("$month/$days($tomorrowDayOfWeek)")
             day.setDisplayedValues(dayDisplayedValues.toTypedArray())
-
-            hour.setDisplayedValues(arrayOf("09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"))
+            hour.setDisplayedValues(arrayOf("09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23","24", "01", "02", "03", "04", "05", "06", "07"))
 
             val minuteDisplayedValues = mutableListOf<String>()
-            for (i in 30..59) {
+            for (i in 1..59) {
                 minuteDisplayedValues.add(i.toString())
             }
             minute.setDisplayedValues(minuteDisplayedValues.toTypedArray())

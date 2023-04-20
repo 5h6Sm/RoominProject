@@ -33,10 +33,10 @@
 
         <NumberPicker
             android:id="@+id/day_datepicker"
-            android:layout_marginRight="40dp"
-            android:layout_width="63dp"
+            android:layout_width="113dp"
             android:layout_height="124dp"
             android:layout_gravity="right"
+            android:layout_marginRight="40dp"
             android:theme="@style/NumberPicker" />
 
         <NumberPicker
