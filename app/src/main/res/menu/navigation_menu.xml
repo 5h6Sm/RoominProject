@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/memuhome"
+        android:title="홈"
+        android:titleTextAppearance="@style/MyTitleStyle"/>
+
+    <item
+        android:id="@+id/navigation_roomin"
+        android:icon="@drawable/menuroomin"
+        android:title="루민"
+        android:titleTextAppearance="@style/MyTitleStyle"/>
+
+    <item
+        android:id="@+id/navigation_service"
+        android:icon="@drawable/menuservice"
+        android:title="서비스"
+        android:titleTextAppearance="@style/MyTitleStyle"/>
+
+    <item
+        android:id="@+id/navigation_mypage"
+        android:icon="@drawable/menumypage"
+        android:title="My"
+        android:titleTextAppearance="@style/MyTitleStyle"/>
+</menu>
