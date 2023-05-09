@@ -68,11 +68,60 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="수단 선택"
+        android:text="선택"
         android:textColor="#A4A4A4"
         android:fontFamily="@font/gmarketsansmedium"
         android:layout_marginLeft="29dp"
         android:textSize="12dp"/>
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:fontFamily="@font/gmarketsansmedium"
+            android:id="@+id/toggleButton1"
+            android:layout_width="92dp"
+            android:layout_height="50dp"
+            android:text="룸전화"
+            android:textColor="#D1D1D1"
+            android:background="@drawable/toggle_button_background"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:textSize="18sp"
+            android:radius="16dp"
+            android:gravity="center"
+            android:button="@null" />
+        <CheckBox
+            android:fontFamily="@font/gmarketsansmedium"
+            android:id="@+id/toggleButton2"
+            android:layout_width="92dp"
+            android:layout_height="50dp"
+            android:text="휴대폰"
+            android:textColor="#D1D1D1"
+            android:background="@drawable/toggle_button_background"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:textSize="18sp"
+            android:radius="16dp"
+            android:gravity="center"
+            android:button="@null" />
+
+        <CheckBox
+            android:fontFamily="@font/gmarketsansmedium"
+            android:id="@+id/toggleButton3"
+            android:layout_width="92dp"
+            android:layout_height="50dp"
+            android:text="룸노크"
+            android:textColor="#D1D1D1"
+            android:background="@drawable/toggle_button_background"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:textSize="18sp"
+            android:radius="16dp"
+            android:gravity="center"
+            android:button="@null" />
+    </LinearLayout>
     <LinearLayout
         android:layout_marginTop="8dp"
         android:gravity="center"

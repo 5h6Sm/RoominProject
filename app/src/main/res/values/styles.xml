@@ -5,4 +5,10 @@
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">@font/gmarketsansmedium</item> <!-- 원하는 폰트 설정 -->
     </style>
+    <style name="numberPickerCustomSize">
+        <!--Display textSize-->
+        <item name="android:textSize">18dp</item>
+        <!--Display textColor-->
+        <item name="android:editTextColor">#494949</item>
+    </style>
 </resources>

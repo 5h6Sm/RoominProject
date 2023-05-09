@@ -20,5 +20,7 @@
     </style>
     <style name="NumberPicker">
         <item name="colorControlNormal">#E8E8E8</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">#494949</item>
     </style>
 </resources>
