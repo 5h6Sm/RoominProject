@@ -1,20 +1,15 @@
 package com.example.roomins
 
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
-import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
-import androidx.core.text.set
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.util.*
-import kotlin.math.min
 
 class ChoiceCall : AppCompatActivity() {
     private lateinit var timePicker: TimePicker
@@ -120,16 +115,19 @@ class ChoiceCall : AppCompatActivity() {
             val checkBox1 = bottomSheetView.findViewById<CheckBox>(R.id.toggleButton1)
             val checkBox2 = bottomSheetView.findViewById<CheckBox>(R.id.toggleButton2)
             val checkBox3 = bottomSheetView.findViewById<CheckBox>(R.id.toggleButton3)
+            val imageView: ImageView = findViewById(R.id.imageView)
 
             // 체크박스 클릭 시 이벤트 처리
-// 체크박스 클릭 시 이벤트 처리
+            // 체크박스 클릭 시 이벤트 처리
             checkBox1.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) {
                     checkBox1.setBackgroundResource(R.drawable.toggle_button_clicked)
                     checkBox1.setTextColor(Color.parseColor("#FBFBFB"))
+                    imageView.setImageResource(R.drawable.chktext);
                 } else {
                     checkBox1.setTextColor(Color.parseColor("#D1D1D1"))
                     checkBox1.setBackgroundResource(R.drawable.toggle_button_background)
+                    imageView.setImageDrawable(null);
                 }
             }
 
