@@ -1,5 +1,6 @@
 package com.example.roomins
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Spannable
@@ -9,6 +10,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import kotlinx.coroutines.selects.select
 import java.util.*
 
 class ChoiceCall : AppCompatActivity() {
@@ -28,6 +30,7 @@ class ChoiceCall : AppCompatActivity() {
             // bottomSheetDialog 호출
             bottomSheetDialog.show()
 
+            val intentbtn : AppCompatButton = bottomSheetView.findViewById(R.id.button_select2)
             val day : NumberPicker = bottomSheetView.findViewById(R.id.day_datepicker)
             val hour : NumberPicker = bottomSheetView.findViewById(R.id.hour_datepicker)
             val minute : NumberPicker = bottomSheetView.findViewById(R.id.minute_datepicker)
@@ -43,7 +46,7 @@ class ChoiceCall : AppCompatActivity() {
             minute.descendantFocusability = NumberPicker.FOCUS_BLOCK_DESCENDANTS
 
             val calendar = Calendar.getInstance()
-            var today = calendar.get(Calendar.DAY_OF_WEEK)
+            var today = calendar.get(Calendar.DAY_OF_WEEK) - 1
             var days = calendar.get(Calendar.DAY_OF_MONTH)
             var month = calendar.get(Calendar.MONTH) + 1
 
@@ -56,17 +59,6 @@ class ChoiceCall : AppCompatActivity() {
             day.maxValue = 31
             hour.maxValue = 24
             minute.maxValue = 59
-
-            var dayOfWeek = when(today) {
-                0 -> "일요일"
-                1 -> "월요일"
-                2 -> "화요일"
-                3 -> "수요일"
-                4 -> "목요일"
-                5-> "금요일"
-                6 -> "토요일"
-                else -> ""
-            }
 
             //보여질 값 설정
             val dayDisplayedValues = mutableListOf<String>()
@@ -86,6 +78,8 @@ class ChoiceCall : AppCompatActivity() {
                     6 -> "토요일"
                     else -> ""
                 }
+
+                dayOfWeek = dayOfWeek.substring(0,1)
                 dayDisplayedValues.add("$month/$days($dayOfWeek)")
                 days++;
                 today++;
@@ -115,19 +109,15 @@ class ChoiceCall : AppCompatActivity() {
             val checkBox1 = bottomSheetView.findViewById<CheckBox>(R.id.toggleButton1)
             val checkBox2 = bottomSheetView.findViewById<CheckBox>(R.id.toggleButton2)
             val checkBox3 = bottomSheetView.findViewById<CheckBox>(R.id.toggleButton3)
-            val imageView: ImageView = findViewById(R.id.imageView)
 
-            // 체크박스 클릭 시 이벤트 처리
             // 체크박스 클릭 시 이벤트 처리
             checkBox1.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) {
                     checkBox1.setBackgroundResource(R.drawable.toggle_button_clicked)
                     checkBox1.setTextColor(Color.parseColor("#FBFBFB"))
-                    imageView.setImageResource(R.drawable.chktext);
                 } else {
                     checkBox1.setTextColor(Color.parseColor("#D1D1D1"))
                     checkBox1.setBackgroundResource(R.drawable.toggle_button_background)
-                    imageView.setImageDrawable(null);
                 }
             }
 
@@ -166,6 +156,45 @@ class ChoiceCall : AppCompatActivity() {
             checkBox3.isPressed = false
             checkBox3.isDuplicateParentStateEnabled = false
 
+            intentbtn.setOnClickListener {
+                val selectedDay = day.displayedValues[day.value - 1]
+                val selectedHour = hour.displayedValues[hour.value - 1]
+                var selectedMinute = minute.displayedValues[minute.value - 1]
+
+                val selectedDay1 = selectedDay.split("/")
+                var ampm = "오전"
+                if(selectedHour.toInt() >= 13){
+                    ampm = "오후"
+                }
+                if(selectedMinute.toInt() < 10){
+                    selectedMinute = "0$selectedMinute"
+                }
+                val formattedText = "  ${selectedDay1.get(0)}월 ${selectedDay1.get(1).split("(").get(0)}일  $ampm ${selectedHour.toInt()}:$selectedMinute"
+                val textView = findViewById<TextView>(R.id.choice_text)
+                textView.text = formattedText
+                // 체크된 체크박스의 텍스트 추출
+                val selectedCheckBoxTexts = mutableListOf<String>()
+                if (checkBox1.isChecked) {
+                    selectedCheckBoxTexts.add(checkBox1.text.toString())
+                }
+                if (checkBox2.isChecked) {
+                    selectedCheckBoxTexts.add(checkBox2.text.toString())
+                }
+                if (checkBox3.isChecked) {
+                    selectedCheckBoxTexts.add(checkBox3.text.toString())
+                }
+
+                val Calling = findViewById<TextView>(R.id.roomcalling)
+                val existingText = Calling.text.toString()
+                val newText = if (existingText.isNotEmpty()) {
+                    "${selectedCheckBoxTexts.joinToString(", ")}"
+                } else {
+                    "${selectedCheckBoxTexts.joinToString(", ")}"
+                }
+                Calling.text = newText
+
+                bottomSheetDialog.dismiss() // 다이어로그 닫기
+            }
         }
     }
 }

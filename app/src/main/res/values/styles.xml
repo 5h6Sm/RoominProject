@@ -7,7 +7,7 @@
     </style>
     <style name="numberPickerCustomSize">
         <!--Display textSize-->
-        <item name="android:textSize">18dp</item>
+        <item name="android:textSize">16dp</item>
         <!--Display textColor-->
         <item name="android:editTextColor">#494949</item>
     </style>

@@ -90,7 +90,8 @@
             android:layout_gravity="center_vertical"
             android:textSize="16dp"></TextView>
         <TextView
-            android:layout_width="149dp"
+            android:id="@+id/choice_text"
+            android:layout_width="158dp"
             android:layout_height="32dp"
             android:textColor="#494949"
             android:background="@drawable/backgroundtext"
@@ -124,6 +125,7 @@
             android:textSize="16dp"></TextView>
 
         <TextView
+            android:id="@+id/roomcalling"
             android:textColor="#494949"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -158,7 +158,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:background="@drawable/round_button_3"
-        android:id="@+id/button_select"
+        android:id="@+id/button_select2"
         android:layout_width="328dp"
         android:layout_height="68dp"
         android:gravity="center"
