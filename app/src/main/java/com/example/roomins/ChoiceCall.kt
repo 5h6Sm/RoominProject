@@ -46,8 +46,8 @@ class ChoiceCall : AppCompatActivity() {
             minute.descendantFocusability = NumberPicker.FOCUS_BLOCK_DESCENDANTS
 
             val calendar = Calendar.getInstance()
-            var today = calendar.get(Calendar.DAY_OF_WEEK) - 1
-            var days = calendar.get(Calendar.DAY_OF_MONTH)
+            var today = calendar.get(Calendar.DAY_OF_WEEK)
+            var days = calendar.get(Calendar.DAY_OF_MONTH) + 1
             var month = calendar.get(Calendar.MONTH) + 1
 
             //  최소값 설정
