@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ChoiceCall">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="35dp"
+
+    <ImageButton
+        android:id="@+id/service_intent"
+        android:layout_width="33dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="25dp"
         android:backgroundTint="@color/white"
-        android:text="&lt;"
-        android:textColor="#777777"
         android:fontFamily="@font/gmarketsansmedium"
+        android:scaleType="fitCenter"
+        android:src="@drawable/arrow2"
+        android:textColor="#777777"
         android:textColorHint="#777777"
-        android:textSize="25dp">
-    </TextView>
+        android:textSize="25dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="33dp"
         android:fontFamily="@font/gmarketsansmedium"
         android:text="모닝콜"
         android:textColor="#494949"
@@ -58,7 +62,7 @@
         android:layout_width="78dp"
         android:layout_height="32dp"
         android:layout_gravity="center_vertical"
-        android:layout_marginTop="-65dp"
+        android:layout_marginTop="-47dp"
         android:layout_marginLeft="160dp"
         android:background="@drawable/backboxgray">
         <TextView
@@ -90,15 +94,15 @@
             android:textSize="16dp"></TextView>
         <TextView
             android:id="@+id/choice_text"
-            android:layout_width="158dp"
+            android:layout_width="178dp"
             android:layout_height="32dp"
             android:textColor="#494949"
             android:background="@drawable/backgroundtext"
-            android:text="  2월 3일 오전 9:30"
+            android:text="2월 3일 오전 9:30"
             android:fontFamily="@font/gmarketsansmedium"
             android:textSize="16dp"
-            android:layout_marginLeft="77dp"
-            android:gravity="center_vertical"
+            android:layout_marginLeft="68dp"
+            android:gravity="center"
             android:layout_gravity="center_vertical"
             android:paddingTop="4dp"
             android:paddingBottom="4dp"
@@ -111,7 +115,8 @@
         android:layout_height="68dp"
         android:layout_marginLeft="-328dp"
         android:layout_marginTop="450dp"
-        android:background="@drawable/backgroundtest">
+        android:background="@drawable/backgroundtest"
+        android:gravity="center_vertical">
 
         <TextView
             android:layout_width="wrap_content"
@@ -120,33 +125,31 @@
             android:fontFamily="@font/gmarketsansmedium"
             android:text="모닝콜 수단"
             android:textColor="#494949"
-            android:layout_gravity="center_vertical"
-            android:textSize="16dp"></TextView>
+            android:textSize="16dp"
+            android:gravity="start" />
 
-        <TextView
-            android:id="@+id/roomcalling"
-            android:textColor="#494949"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="30dp"
-            android:background="@drawable/backgroundtext"
-            android:fontFamily="@font/gmarketsansmedium"
-            android:padding="7dp"
-            android:text="룸 전화"
-            android:textSize="16dp" />
-<!--        <TextView-->
-<!--            android:textColor="#494949"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@drawable/backgroundtext"-->
-<!--            android:text="휴대폰"-->
-<!--            android:layout_marginLeft="10dp"-->
-<!--            android:fontFamily="@font/gmarketsansmedium"-->
-<!--            android:textSize="16dp"-->
-<!--            android:layout_gravity="center_vertical"-->
-<!--            android:padding="7dp"/>-->
+            android:layout_marginRight="15dp"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/roomcalling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/backgroundtext"
+                android:fontFamily="@font/gmarketsansmedium"
+                android:padding="7dp"
+                android:text="룸 전화"
+                android:layout_gravity="center"
+                android:textColor="#494949"
+                android:textSize="16dp"
+                android:gravity="center_vertical|end" />
+        </LinearLayout>
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="328dp"
