@@ -87,9 +87,9 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="56dp"
-                    android:layout_height="35dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="22dp"
                     android:src="@drawable/card" />
 
                 <TextView
@@ -135,9 +135,9 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="56dp"
-                    android:layout_height="35dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="22dp"
                     android:src="@drawable/review" />
 
                 <TextView
@@ -157,9 +157,9 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="56dp"
-                    android:layout_height="35dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="22dp"
                     android:src="@drawable/specification" />
 
                 <TextView
@@ -189,9 +189,9 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="56dp"
-                    android:layout_height="35dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="22dp"
                     android:src="@drawable/setting" />
 
                 <TextView
@@ -211,9 +211,9 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="56dp"
-                    android:layout_height="35dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="22dp"
                     android:src="@drawable/mypagemenualram" />
 
                 <TextView
@@ -243,9 +243,9 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="56dp"
-                    android:layout_height="35dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="22dp"
                     android:src="@drawable/center" />
 
                 <TextView
@@ -265,9 +265,9 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="56dp"
-                    android:layout_height="35dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="22dp"
                     android:src="@drawable/talk" />
 
                 <TextView
@@ -286,9 +286,9 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="56dp"
-                    android:layout_height="35dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="22dp"
                     android:src="@drawable/qna" />
 
                 <TextView
@@ -307,9 +307,9 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="56dp"
-                    android:layout_height="35dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="22dp"
                     android:src="@drawable/lougout" />
 
                 <TextView
