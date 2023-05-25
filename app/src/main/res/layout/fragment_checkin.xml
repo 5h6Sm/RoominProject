@@ -36,13 +36,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-
             <Button
                 android:layout_width="97dp"
                 android:layout_height="104dp"
                 android:layout_marginLeft="35dp"
                 android:backgroundTint="#FBFBFB"
                 android:text="호텔 등록"
+                android:drawableRight="@drawable/hotel"
                 android:textColor="@color/black">
             </Button>
 
