@@ -21,6 +21,12 @@ class ChoiceCall : AppCompatActivity() {
         val button_select = findViewById<AppCompatButton>(R.id.button_select)
 
         button_select.setOnClickListener {
+            var serviceintent:ImageButton = findViewById(R.id.service_intent)
+            serviceintent.setOnClickListener{
+                val intent = Intent(this, ServiceFragment::class.java)
+                startActivity(intent)
+            }
+
             // bottomSheetDialog 객체 생성
             val bottomSheetDialog = BottomSheetDialog(this)
             // layout_bottom_sheet 레이아웃을 뷰로 생성
