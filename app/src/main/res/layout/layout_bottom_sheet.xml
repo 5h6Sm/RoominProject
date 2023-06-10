@@ -132,6 +132,7 @@
         android:layout_marginLeft="29dp"
         android:layout_marginTop="22dp"/>
     <EditText
+        android:id="@+id/textinput"
         android:padding="10dp"
         android:gravity="top|left"
         android:layout_gravity="center"
@@ -143,7 +144,15 @@
         android:layout_marginTop="10dp"
         android:textSize="14dp"
         />
-    
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="-25dp"
+        android:layout_marginRight="15dp"
+        android:hint="글자 수가 표시될 자리 입니다." />
     <TextView
         android:id="@+id/text_edit_noice"
         android:layout_gravity="center"
