@@ -28,7 +28,9 @@
                     android:layout_gravity="center|left"
                     android:layout_weight="0"
                     android:minHeight="48dp"
-                    android:src="@drawable/arrow" />
+                    android:src="@drawable/arrow"
+
+                    />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -38,7 +40,11 @@
                     android:layout_weight="0"
                     android:foregroundGravity="center"
                     android:gravity="center"
-                    android:text="호텔 등록" />
+                    android:text="호텔 등록"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/gmarketsansmedium"
+                    android:textSize="15dp"
+                    />
             </FrameLayout>
 
         </LinearLayout>
@@ -74,6 +80,7 @@
             android:paddingTop="2dp"
             android:paddingBottom="2dp"
             android:textColor="#5362CA"
+            android:fontFamily="@font/gmarketsansmedium"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -83,6 +90,7 @@
             android:layout_marginTop="15dp"
             android:textColor="#494949"
             android:textSize="15dp"
+            android:fontFamily="@font/gmarketsansmedium"
             />
 
         <TextView
@@ -90,7 +98,9 @@
             android:layout_height="wrap_content"
             android:text="예약 정보 입력 *"
             android:layout_marginTop="20dp"
-            android:textSize="10dp"/>
+            android:textSize="10dp"
+            android:fontFamily="@font/gmarketsansmedium"
+            />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="wrap_content"
@@ -100,7 +110,9 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/white"
-                android:hint="예약자 명" />
+                android:hint="예약자 명"
+                android:fontFamily="@font/gmarketsansmedium"
+                />
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="wrap_content"
@@ -111,6 +123,7 @@
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/white"
                 android:hint="전화번호"
+                android:fontFamily="@font/gmarketsansmedium"
 
                 />
         </com.google.android.material.textfield.TextInputLayout>
@@ -122,7 +135,11 @@
         android:layout_gravity="center"
         android:background="@drawable/round_button_3"
         android:text="완료"
+        android:fontFamily="@font/gmarketsansmedium"
+        android:textColor="#fff"
         android:layout_marginTop="180dp"
+        android:backgroundTint="#FEB2C0"
+        android:textSize="17dp"
         />
 
 </LinearLayout>

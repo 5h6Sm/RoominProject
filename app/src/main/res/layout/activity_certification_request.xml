@@ -31,7 +31,12 @@
         android:layout_weight="0"
         android:foregroundGravity="center"
         android:gravity="center"
-        android:text="회원가입" />
+        android:text="회원가입"
+        android:textStyle="bold"
+        android:fontFamily="@font/gmarketsansmedium"
+        android:textSize="15dp"
+
+        />
 
   </FrameLayout>
 <LinearLayout
@@ -45,12 +50,14 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="인증번호를 받지 못하셨나요?"
+      android:fontFamily="@font/gmarketsansmedium"
       android:layout_gravity="center"
       />
   <Button
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="다시 요청하기"
+      android:fontFamily="@font/gmarketsansmedium"
       android:backgroundTint="@color/white"
       android:textColor="@color/black"
       android:layout_gravity="center"
