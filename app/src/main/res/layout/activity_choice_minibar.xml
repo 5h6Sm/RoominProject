@@ -27,7 +27,7 @@
         android:layout_marginLeft="100dp"
         android:layout_marginTop="33dp"
         android:fontFamily="@font/gmarketsansmedium"
-        android:text="모닝콜"
+        android:text="미니바"
         android:textColor="#494949"
         android:textSize="18dp" />
 
@@ -37,7 +37,7 @@
         android:layout_marginLeft="-88dp"
         android:layout_marginTop="130dp"
         android:orientation="horizontal"
-        android:background="@drawable/backcall">
+        android:background="@drawable/minibarback">
 
         <ImageView
             android:layout_width="70dp"
@@ -45,7 +45,7 @@
             android:layout_gravity="center_vertical"
             android:backgroundTint="#000000"
             android:layout_marginLeft="25dp"
-            android:src="@drawable/call" />
+            android:src="@drawable/minibarpork" />
     </LinearLayout>
 
     <TextView
@@ -54,7 +54,7 @@
         android:layout_marginLeft="-205dp"
         android:layout_marginTop="320dp"
         android:fontFamily="@font/gmarketsansbold"
-        android:text="모닝콜"
+        android:text="미니바"
         android:textColor="#494949"
         android:textSize="24dp" />
 
@@ -159,7 +159,6 @@
         android:background="@drawable/backgroundtest">
 
         <TextView
-            android:id="@+id/add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
@@ -173,7 +172,6 @@
             android:layout_height="wrap_content"
             android:background="@drawable/backgroundtext"
             android:text="없음"
-            android:id="@+id/show"
             android:textColor="#494949"
             android:fontFamily="@font/gmarketsansmedium"
             android:textSize="16dp"
