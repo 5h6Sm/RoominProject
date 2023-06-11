@@ -11,9 +11,7 @@ class RegisteredHotelFinal : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.registered_hotel_map)
-        val t = findViewById<LinearLayout>(R.id.br_front)
-        val parentLayout = t.parent as ViewGroup
-        parentLayout.bringChildToFront(t)
+
     }
 }
     
