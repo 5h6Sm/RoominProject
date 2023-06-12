@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/service_intent"
+            android:layout_width="33dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="25dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/gmarketsansmedium"
+            android:scaleType="fitCenter"
+            android:src="@drawable/arrow2"
+            android:textColor="#777777"
+            android:textColorHint="#777777"
+            android:textSize="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="33dp"
+            android:fontFamily="@font/gmarketsansmedium"
+            android:text="여권 등록"
+            android:textColor="#494949"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="153dp"
+        android:textSize="18dp"
+        android:text="등록하신 카드가 없어요.">
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:text="카드를 등록하고 호텔 서비스를">
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:layout_marginBottom="38dp"
+        android:text="이용해보세요!">
+    </TextView>
+
+    <ImageView
+        android:layout_width="191dp"
+        android:layout_height="220dp"
+        android:layout_gravity="center"
+        android:src="@drawable/card"
+        android:layout_marginBottom="103dp">
+    </ImageView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@drawable/round_button_3"
+        android:layout_gravity="center"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:textColor="#FBFBFB"
+        android:fontFamily="@font/gmarketsansmedium"
+        android:text="등록하기"
+        android:textSize="16dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</LinearLayout>
