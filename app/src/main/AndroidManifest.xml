@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,7 +15,7 @@
         android:theme="@style/Theme.RoominS"
         tools:targetApi="31">
         <activity
-            android:name=".TaxiCall"
+            android:name=".InternetCall"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
@@ -25,13 +27,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".UmbrellaService"
+            android:name=".TaxiCall"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
 
 
+        </activity>
+        <activity
+            android:name=".UmbrellaService"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
         <activity
             android:name=".MyHotel"

@@ -134,7 +134,6 @@ class TaxiCall : AppCompatActivity() {
                 val Calling = findViewById<TextView>(R.id.roomcalling)
                 val AddText = findViewById<TextView>(R.id.add)
 
-                AddText.text = ""
                 val input1 = bottomSheetView.findViewById<EditText>(R.id.textinput1).text.toString()
                 val input2 = bottomSheetView.findViewById<EditText>(R.id.textinput2).text.toString()
 
