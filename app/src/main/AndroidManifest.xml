@@ -13,6 +13,27 @@
         android:theme="@style/Theme.RoominS"
         tools:targetApi="31">
         <activity
+            android:name=".TaxiCall"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UmbrellaService"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+
+
+        </activity>
+        <activity
             android:name=".MyHotel"
             android:exported="false">
             <meta-data
@@ -36,16 +57,13 @@
         <activity
             android:name=".RegisteredHotelFinal"
             android:exported="true">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".ChoiceCall"
-            android:exported="false">
+            android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -56,12 +74,6 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
         </activity>
         <activity
             android:name=".MainActivity"
@@ -69,9 +81,7 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-
         </activity>
-
         <activity
             android:name=".RegisteredHotelMap"
             android:exported="true">

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/choosetxt"
+        android:textAlignment="center"
+        android:text="서비스 요청서"
+        android:textColor="#494949"
+        android:layout_marginTop="20dp"
+        android:textSize="18dp"
+        android:fontFamily="@font/gmarketsansmedium"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#A4A4A4"
+        android:text="시간 선택"
+        android:textSize="12dp"
+        android:fontFamily="@font/gmarketsansmedium"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <NumberPicker
+            android:id="@+id/day_datepicker"
+            android:layout_width="80dp"
+            android:layout_height="124dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="30dp"
+            android:theme="@style/NumberPicker" />
+
+        <NumberPicker
+            android:id="@+id/hour_datepicker"
+            android:layout_width="50dp"
+            android:layout_height="124dp"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:theme="@style/NumberPicker" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="124dp"
+            android:fontFamily="@font/gmarketsansmedium"
+            android:gravity="center"
+            android:text=":"
+            android:textSize="18dp" />
+
+        <NumberPicker
+            android:id="@+id/minute_datepicker"
+            android:layout_width="50dp"
+            android:layout_height="124dp"
+            android:layout_gravity="right"
+            android:theme="@style/NumberPicker" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="수단 선택"
+        android:textColor="#A4A4A4"
+        android:fontFamily="@font/gmarketsansmedium"
+        android:layout_marginLeft="29dp"
+        android:textSize="12dp"/>
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:fontFamily="@font/gmarketsansmedium"
+            android:id="@+id/toggleButton1"
+            android:layout_width="92dp"
+            android:layout_height="50dp"
+            android:text="장우산"
+            android:textColor="#D1D1D1"
+            android:background="@drawable/toggle_button_background"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:textSize="18sp"
+            android:radius="16dp"
+            android:gravity="center"
+            android:button="@null" />
+        <CheckBox
+            android:fontFamily="@font/gmarketsansmedium"
+            android:id="@+id/toggleButton2"
+            android:layout_width="92dp"
+            android:layout_height="50dp"
+            android:text="단우산"
+            android:textColor="#D1D1D1"
+            android:background="@drawable/toggle_button_background"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:textSize="18sp"
+            android:radius="16dp"
+            android:gravity="center"
+            android:button="@null" />
+
+        <CheckBox
+            android:fontFamily="@font/gmarketsansmedium"
+            android:id="@+id/toggleButton3"
+            android:layout_width="92dp"
+            android:layout_height="50dp"
+            android:text="우비"
+            android:textColor="#D1D1D1"
+            android:background="@drawable/toggle_button_background"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:textSize="18sp"
+            android:radius="16dp"
+            android:gravity="center"
+            android:button="@null" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="우비 사이즈"
+        android:textColor="#A4A4A4"
+        android:fontFamily="@font/gmarketsansmedium"
+        android:layout_marginLeft="29dp"
+        android:textSize="12dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/visible_page"
+        >
+        <CheckBox
+            android:fontFamily="@font/gmarketsansmedium"
+            android:id="@+id/toggleButton4"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:text="XL"
+            android:textColor="#D1D1D1"
+            android:background="@drawable/toggle_button_background"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:textSize="18sp"
+            android:radius="16dp"
+            android:gravity="center"
+            android:button="@null" />
+        <CheckBox
+            android:fontFamily="@font/gmarketsansmedium"
+            android:id="@+id/toggleButton5"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:text="L"
+            android:textColor="#D1D1D1"
+            android:background="@drawable/toggle_button_background"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:textSize="18sp"
+            android:radius="16dp"
+            android:gravity="center"
+            android:button="@null" />
+
+        <CheckBox
+            android:fontFamily="@font/gmarketsansmedium"
+            android:id="@+id/toggleButton6"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:text="M"
+            android:textColor="#D1D1D1"
+            android:background="@drawable/toggle_button_background"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:textSize="18sp"
+            android:radius="16dp"
+            android:gravity="center"
+            android:button="@null" />
+
+        <CheckBox
+            android:fontFamily="@font/gmarketsansmedium"
+            android:id="@+id/toggleButton7"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:text="S"
+            android:textColor="#D1D1D1"
+            android:background="@drawable/toggle_button_background"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:textSize="18sp"
+            android:radius="16dp"
+            android:gravity="center"
+            android:button="@null" />
+
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@drawable/round_button_3"
+        android:id="@+id/button_select2"
+        android:layout_width="328dp"
+        android:layout_height="68dp"
+        android:gravity="center"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="28dp"
+        android:textColor="#FBFBFB"
+        android:text="작성하기"
+        android:textSize="16dp"
+        android:fontFamily="@font/gmarketsansmedium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</LinearLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ChoiceCall"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        >
+        <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0">
+        <ImageButton
+            android:id="@+id/service_intent"
+            android:layout_width="33dp"
+            android:layout_height="36dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/gmarketsansmedium"
+            android:scaleType="fitCenter"
+            android:src="@drawable/arrow2"
+            android:textColor="#777777"
+            android:textColorHint="#777777"
+            android:textSize="25dp"
+            android:layout_gravity="center|left"
+            android:layout_weight="0"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gmarketsansmedium"
+            android:text="우산대여"
+            android:textColor="#494949"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            />
+        </FrameLayout>
+    </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#000000"
+            android:scaleType="center"
+            android:src="@drawable/umbrella" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/gmarketsansbold"
+        android:text="우산대여"
+        android:textColor="#494949"
+        android:textSize="24dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="328dp"
+            android:layout_height="68dp"
+            android:background="@drawable/backgroundtest"
+            android:layout_marginLeft="15dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/gmarketsansmedium"
+                android:text="선택"
+                android:textColor="#494949"
+                android:textSize="16dp"></TextView>
+            <TextView
+                android:id="@+id/choice_text"
+                android:layout_width="178dp"
+                android:layout_height="32dp"
+                android:textColor="#494949"
+                android:background="@drawable/backgroundtext"
+                android:text="2월 3일 오전 9:30"
+                android:fontFamily="@font/gmarketsansmedium"
+                android:textSize="16dp"
+                android:layout_marginLeft="88dp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingRight="2dp"
+                android:paddingLeft="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="328dp"
+            android:layout_height="68dp"
+            android:background="@drawable/backgroundtest"
+            android:layout_marginLeft="15dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/gmarketsansmedium"
+                android:text="선택"
+                android:textColor="#494949"
+                android:textSize="16dp"
+                 />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/roomcalling"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/backgroundtext"
+                android:fontFamily="@font/gmarketsansmedium"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:paddingTop="4dp"
+                android:paddingRight="2dp"
+                android:paddingBottom="4dp"
+                android:text="장우산"
+                android:layout_marginLeft="188dp"
+                android:textColor="#494949"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@drawable/round_button_3"
+        android:id="@+id/button_select"
+        android:layout_width="328dp"
+        android:layout_height="68dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="230dp"
+        android:textColor="#FBFBFB"
+        android:text="작성하기"
+        android:textSize="16dp"
+        android:fontFamily="@font/gmarketsansmedium"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</LinearLayout>
