@@ -2,24 +2,27 @@ package com.example.roomins
 
 import android.content.Intent
 import android.graphics.Color
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.TextWatcher
 import android.text.style.ForegroundColorSpan
+import android.view.View
 import android.widget.*
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import kotlinx.coroutines.selects.select
 import java.util.*
 
-class ChoiceCall : AppCompatActivity() {
-    private lateinit var timePicker: TimePicker
+class UmbrellaService : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_choice_call)
+        setContentView(R.layout.activity_umbrella_service)
+
+
+
         val button_select = findViewById<AppCompatButton>(R.id.button_select)
 
         button_select.setOnClickListener {
@@ -32,7 +35,7 @@ class ChoiceCall : AppCompatActivity() {
             // bottomSheetDialog 객체 생성
             val bottomSheetDialog = BottomSheetDialog(this)
             // layout_bottom_sheet 레이아웃을 뷰로 생성
-            val bottomSheetView = layoutInflater.inflate(R.layout.layout_bottom_sheet, null)
+            val bottomSheetView = layoutInflater.inflate(R.layout.layout_bottom_sheet3, null)
             // bottomSheetDialog 뷰 생성
             bottomSheetDialog.setContentView(bottomSheetView)
             // bottomSheetDialog 호출
@@ -101,23 +104,16 @@ class ChoiceCall : AppCompatActivity() {
             }
             minute.setDisplayedValues(minuteDisplayedValues.toTypedArray())
 
-            val text_edit_noice = bottomSheetView.findViewById<TextView>(R.id.text_edit_noice);
 
-            val content = text_edit_noice.text.toString();
-            val spannableString = SpannableString(content);
-
-            val world = "위와 같이"
-            val start = content.indexOf(world)
-            val end = start + world.length;
-            spannableString.setSpan(ForegroundColorSpan(Color.parseColor("#DF8494")), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-
-            text_edit_noice.setText(spannableString);
 
             // 체크박스 선언 및 초기화
             val checkBox1 = bottomSheetView.findViewById<CheckBox>(R.id.toggleButton1)
             val checkBox2 = bottomSheetView.findViewById<CheckBox>(R.id.toggleButton2)
             val checkBox3 = bottomSheetView.findViewById<CheckBox>(R.id.toggleButton3)
 
+
+            var linearLayoutVisible = bottomSheetView.findViewById<LinearLayout>(R.id.visible_page)
+            linearLayoutVisible.visibility = View.GONE
             // 체크박스 클릭 시 이벤트 처리
             checkBox1.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) {
@@ -143,9 +139,11 @@ class ChoiceCall : AppCompatActivity() {
                 if (isChecked) {
                     checkBox3.setTextColor(Color.parseColor("#FBFBFB"))
                     checkBox3.setBackgroundResource(R.drawable.toggle_button_clicked)
+                    linearLayoutVisible.visibility = View.VISIBLE
                 } else {
                     checkBox3.setTextColor(Color.parseColor("#D1D1D1"))
                     checkBox3.setBackgroundResource(R.drawable.toggle_button_background)
+                    linearLayoutVisible.visibility = View.GONE
                 }
             }
 
@@ -163,6 +161,74 @@ class ChoiceCall : AppCompatActivity() {
             checkBox3.isFocusable = true
             checkBox3.isPressed = false
             checkBox3.isDuplicateParentStateEnabled = false
+
+
+            // 체크박스 선언 및 초기화
+            val checkBox4 = bottomSheetView.findViewById<CheckBox>(R.id.toggleButton4)
+            val checkBox5 = bottomSheetView.findViewById<CheckBox>(R.id.toggleButton5)
+            val checkBox6 = bottomSheetView.findViewById<CheckBox>(R.id.toggleButton6)
+            val checkBox7 = bottomSheetView.findViewById<CheckBox>(R.id.toggleButton7)
+
+            // 체크박스 클릭 시 이벤트 처리
+            checkBox4.setOnCheckedChangeListener { _, isChecked ->
+                if (isChecked) {
+                    checkBox4.setBackgroundResource(R.drawable.toggle_button_clicked)
+                    checkBox4.setTextColor(Color.parseColor("#FBFBFB"))
+                } else {
+                    checkBox4.setTextColor(Color.parseColor("#D1D1D1"))
+                    checkBox4.setBackgroundResource(R.drawable.toggle_button_background)
+                }
+            }
+
+            checkBox5.setOnCheckedChangeListener { _, isChecked ->
+                if (isChecked) {
+                    checkBox5.setTextColor(Color.parseColor("#FBFBFB"))
+                    checkBox5.setBackgroundResource(R.drawable.toggle_button_clicked)
+                } else {
+                    checkBox5.setTextColor(Color.parseColor("#D1D1D1"))
+                    checkBox5.setBackgroundResource(R.drawable.toggle_button_background)
+                }
+            }
+
+            checkBox6.setOnCheckedChangeListener { _, isChecked ->
+                if (isChecked) {
+                    checkBox6.setTextColor(Color.parseColor("#FBFBFB"))
+                    checkBox6.setBackgroundResource(R.drawable.toggle_button_clicked)
+                } else {
+                    checkBox6.setTextColor(Color.parseColor("#D1D1D1"))
+                    checkBox6.setBackgroundResource(R.drawable.toggle_button_background)
+                }
+            }
+
+            checkBox7.setOnCheckedChangeListener { _, isChecked ->
+                if (isChecked) {
+                    checkBox7.setTextColor(Color.parseColor("#FBFBFB"))
+                    checkBox7.setBackgroundResource(R.drawable.toggle_button_clicked)
+                } else {
+                    checkBox7.setTextColor(Color.parseColor("#D1D1D1"))
+                    checkBox7.setBackgroundResource(R.drawable.toggle_button_background)
+                }
+            }
+
+
+            // 다중 선택을 가능하도록 체크박스의 속성 변경
+            checkBox4.isClickable = true
+            checkBox4.isFocusable = true
+            checkBox4.isPressed = false
+
+            checkBox5.isClickable = true
+            checkBox5.isFocusable = true
+            checkBox5.isPressed = false
+
+            checkBox6.isClickable = true
+            checkBox6.isFocusable = true
+            checkBox6.isPressed = false
+            checkBox6.isDuplicateParentStateEnabled = false
+
+            checkBox7.isClickable = true
+            checkBox7.isFocusable = true
+            checkBox7.isPressed = false
+            checkBox7.isDuplicateParentStateEnabled = false
 
             intentbtn.setOnClickListener {
                 val selectedDay = day.displayedValues[day.value - 1]
@@ -191,9 +257,21 @@ class ChoiceCall : AppCompatActivity() {
                 if (checkBox3.isChecked) {
                     selectedCheckBoxTexts.add(checkBox3.text.toString())
                 }
+                if (checkBox4.isChecked) {
+                    selectedCheckBoxTexts.add(checkBox1.text.toString())
+                }
+                if (checkBox5.isChecked) {
+                    selectedCheckBoxTexts.add(checkBox2.text.toString())
+                }
+                if (checkBox6.isChecked) {
+                    selectedCheckBoxTexts.add(checkBox3.text.toString())
+                }
+                if (checkBox7.isChecked) {
+                    selectedCheckBoxTexts.add(checkBox3.text.toString())
+                }
 
                 val Calling = findViewById<TextView>(R.id.roomcalling)
-                val AddText = findViewById<TextView>(R.id.add)
+
                 val existingText = Calling.text.toString()
                 val newText = if (existingText.isNotEmpty()) {
                     "${selectedCheckBoxTexts.joinToString(", ")}"
@@ -201,31 +279,9 @@ class ChoiceCall : AppCompatActivity() {
                     "${selectedCheckBoxTexts.joinToString(", ")}"
                 }
                 Calling.text = newText
-                AddText.text = ""
-                val userinput_edittext_boardwrite = bottomSheetView.findViewById<EditText>(R.id.textinput);
-                val wordcount_textview_boardwrite = bottomSheetView.findViewById<TextView>(R.id.textView)
-                userinput_edittext_boardwrite.addTextChangedListener(object: TextWatcher {
-
-                    override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                        wordcount_textview_boardwrite.text = "0 / 100"
-                    }
-
-                    override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                        var userinput = userinput_edittext_boardwrite.text.toString()
-                        wordcount_textview_boardwrite.text = userinput.length.toString() + " / 100"
-                    }
-
-                    override fun afterTextChanged(s: Editable?) {
-                        var userinput = userinput_edittext_boardwrite.text.toString()
-                        wordcount_textview_boardwrite.text = userinput.length.toString() + " / 100"
-                    }
-
-                })
-                val input = userinput_edittext_boardwrite.text.toString()
-                val showtext = findViewById<TextView>(R.id.show)
-                showtext.text = input //입력한 값 전송하기
                 bottomSheetDialog.dismiss() // 다이어로그 닫기
             }
         }
     }
+
 }

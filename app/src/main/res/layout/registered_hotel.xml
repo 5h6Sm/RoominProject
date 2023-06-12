@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisteredHotel">
+    tools:context=".RegisteredHotel"
+    android:orientation="vertical"
+    >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -32,7 +35,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center|left"
                         android:layout_weight="0"
-                        android:src="@drawable/arrow" />
+                        android:src="@drawable/arrow"
+                        android:backgroundTint="#fff"/>
 
                     <TextView
                         android:id="@+id/textView2"
@@ -42,7 +46,12 @@
                         android:layout_weight="0"
                         android:foregroundGravity="center"
                         android:gravity="center"
-                        android:text="호텔 등록" />
+                        android:text="호텔 등록"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/gmarketsansmedium"
+                        android:textSize="15dp"
+
+                        />
                 </FrameLayout>
 
             </LinearLayout>
@@ -57,10 +66,13 @@
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="130dp"
                 android:gravity="center|left"
                 android:paddingLeft="30dp"
-                android:text="예약하신 호텔의 지역\n또는 나라를 선택해주세요!" />
+                android:text="예약하신 호텔의 지역\n또는 나라를 선택해주세요!"
+                android:fontFamily="@font/gmarketsansmedium"
+
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -71,390 +83,549 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    >
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="300dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:background="@drawable/rounded_coner_view"
-                        android:hint="예)ㄱ,괌" />
+                        android:hint="예)ㄱ,괌"
+                        android:fontFamily="@font/gmarketsansmedium"
+                        android:paddingLeft="20dp"
+                        android:backgroundTint="#FBFBFB"
+
+                        />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
                     android:id="@+id/button2"
-                    android:layout_width="80dp"
-                    android:layout_height="60dp"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="0"
                     android:text="검색"
-                    app:cornerRadius="30px" />
+                    android:background="@drawable/round_button_3"
+                    android:backgroundTint="#494949"
+                    android:textColor="#fff"
+                    />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/button7"
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="괌"
-                    app:cornerRadius="45px" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        >
 
-                <Button
-                    android:id="@+id/button8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="뉴질랜드"
-                    app:cornerRadius="45px" />
+                        <Button
+                            android:id="@+id/button7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
 
-                <Button
-                    android:id="@+id/button9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="덴마크"
-                    app:cornerRadius="45px" />
+                            android:gravity="center"
+                            android:minWidth="50dp"
+                            android:text="괌"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
+                            />
 
-                <Button
-                    android:id="@+id/button10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="독일"
-                    app:cornerRadius="45px" />
-            </LinearLayout>
+                        <Button
+                            android:id="@+id/button8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:gravity="center"
+                            android:text="뉴질랜드"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
+                            />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/button9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:gravity="center"
+                            android:minWidth="60dp"
+                            android:text="덴마크"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
+                            />
 
-                <Button
-                    android:id="@+id/button11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="대만"
-                    app:cornerRadius="45px" />
+                        <Button
+                            android:id="@+id/button10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="50dp"
+                            android:text="독일"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
+                            android:elevation="0dp"
+                            />
+                    </LinearLayout>
 
-                <Button
-                    android:id="@+id/button12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="러시아"
-                    app:cornerRadius="45px" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        >
 
-                <Button
-                    android:id="@+id/button13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="미국"
-                    app:cornerRadius="45px" />
+                        <Button
+                            android:id="@+id/button11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="50dp"
+                            android:text="대만"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
 
-                <Button
-                    android:id="@+id/button14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="몰디브"
-                    app:cornerRadius="45px" />
-            </LinearLayout>
+                            />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/button12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="60dp"
+                            android:text="러시아"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
 
-                <Button
-                    android:id="@+id/button15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="몽골"
-                    app:cornerRadius="45px" />
+                            />
 
-                <Button
-                    android:id="@+id/button16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="브라질"
-                    app:cornerRadius="45px" />
+                        <Button
+                            android:id="@+id/button13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="60dp"
+                            android:text="미국"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
 
-                <Button
-                    android:id="@+id/button17"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="발리"
-                    app:cornerRadius="45px" />
+                            />
 
-                <Button
-                    android:id="@+id/button18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="벨기에"
-                    app:cornerRadius="45px" />
-            </LinearLayout>
+                        <Button
+                            android:id="@+id/button14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="60dp"
+                            android:text="몰디브"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center|start"
-                android:orientation="horizontal">
+                            />
+                    </LinearLayout>
 
-                <Button
-                    android:id="@+id/button19"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="베트남"
-                    app:cornerRadius="45px" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        >
 
-                <Button
-                    android:id="@+id/button20"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="스위스"
-                    app:cornerRadius="45px" />
+                        <Button
+                            android:id="@+id/button15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="50dp"
+                            android:text="몽골"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
 
-                <Button
-                    android:id="@+id/button21"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="싱가포르"
-                    app:cornerRadius="45px" />
 
-            </LinearLayout>
+                            />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/button16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:text="브라질"
+                            app:cornerRadius="45px"
+                            android:minWidth="50dp"
 
-                <Button
-                    android:id="@+id/button22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text=" 사이판"
-                    app:cornerRadius="45px" />
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
 
-                <Button
-                    android:id="@+id/button23"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="스웨덴"
-                    app:cornerRadius="45px" />
 
-                <Button
-                    android:id="@+id/button24"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="일본"
-                    app:cornerRadius="45px" />
+                            />
 
-                <Button
-                    android:id="@+id/button25"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="영국"
-                    app:cornerRadius="45px" />
-            </LinearLayout>
+                        <Button
+                            android:id="@+id/button17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="50dp"
+                            android:text="발리"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center|start"
-                android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/button26"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="오스트리아"
-                    app:cornerRadius="45px" />
+                            />
 
-                <Button
-                    android:id="@+id/button27"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="이탈리아"
-                    app:cornerRadius="45px" />
+                        <Button
+                            android:id="@+id/button18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="50dp"
+                            android:text="벨기에"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
 
-                <Button
-                    android:id="@+id/button28"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="중국
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        >
+
+                        <Button
+                            android:id="@+id/button19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="50dp"
+                            android:text="베트남"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
+
+
+                            />
+
+                        <Button
+                            android:id="@+id/button20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="50dp"
+                            android:text="스위스"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
+
+
+                            />
+
+                        <Button
+                            android:id="@+id/button21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="60dp"
+                            android:text="싱가포르"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
+
+
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        >
+
+                        <Button
+                            android:id="@+id/button22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="50dp"
+                            android:text=" 사이판"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
+
+
+                            />
+
+                        <Button
+                            android:id="@+id/button23"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="50dp"
+                            android:text="스웨덴"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
+
+
+                            />
+
+                        <Button
+                            android:id="@+id/button24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="50dp"
+                            android:text="일본"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
+
+
+                            />
+
+                        <Button
+                            android:id="@+id/button25"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="50dp"
+                            android:text="영국"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
+
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        >
+
+                        <Button
+                            android:id="@+id/button26"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="70dp"
+                            android:text="오스트리아"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
+
+
+                            />
+
+                        <Button
+                            android:id="@+id/button27"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="60dp"
+                            android:text="이탈리아"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
+
+
+                            />
+
+                        <Button
+                            android:id="@+id/button28"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="50dp"
+                            android:text="중국
 "
-                    app:cornerRadius="45px" />
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
 
-            </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center|start"
-                android:orientation="horizontal">
+                            />
 
-                <Button
-                    android:id="@+id/button29"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="체코"
-                    app:cornerRadius="45px" />
+                    </LinearLayout>
 
-                <Button
-                    android:id="@+id/button30"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="캐나다"
-                    app:cornerRadius="45px" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        >
 
-                <Button
-                    android:id="@+id/button31"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:minWidth="20dp"
-                    android:text="코타키나발루"
-                    app:cornerRadius="45px" />
+                        <Button
+                            android:id="@+id/button29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="50dp"
+                            android:text="체코"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
 
-            </LinearLayout>
 
+                            />
+
+                        <Button
+                            android:id="@+id/button30"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="50dp"
+                            android:text="캐나다"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
+
+
+                            />
+
+                        <Button
+                            android:id="@+id/button31"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:minWidth="90dp"
+                            android:text="코타키나발루"
+                            app:cornerRadius="45px"
+                            android:backgroundTint="#F4F4F4"
+                            android:background="@drawable/rounded_coner_view"
+
+
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </ScrollView>
             <Button
                 android:id="@+id/button32"
                 android:layout_width="370dp"
                 android:layout_height="65dp"
                 android:gravity="center"
                 android:text="다음"
-                app:cornerRadius="30px" />
+                app:cornerRadius="30px"
+                android:backgroundTint="#FEB2C0"
+                android:background="@drawable/round_button_3"
+                android:textColor="#fff"
+                android:fontFamily="@font/gmarketsansmedium"
+                android:textSize="17dp"
 
+
+
+                />
         </LinearLayout>
+
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -23,6 +23,7 @@ class ServiceFragment : Fragment(R.layout.fragment_service){
             startActivity(intent)
         }
 
+
         return view
     }
 }

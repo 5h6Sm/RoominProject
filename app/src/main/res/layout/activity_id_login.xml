@@ -4,34 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     tools:context=".IdLogin">
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp">
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
-            android:layout_weight="0"
-            android:background="#00ff0000"
-            android:src="@drawable/arrow" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="0"
-            android:foregroundGravity="center"
-            android:gravity="center"
-            android:text="아이디로 로그인" />
-    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,16 +13,114 @@
         android:layout_weight="0"
         android:orientation="vertical">
 
-        <com.google.android.material.textfield.TextInputLayout
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0">
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:layout_weight="0"
+                android:background="#00ff0000"
+                android:src="@drawable/arrow"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="아이디" />
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
+                android:layout_gravity="center"
+                android:layout_weight="0"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="아이디로 로그인"
+                android:textStyle="bold"
+                android:fontFamily="@font/gmarketsansmedium"
+                android:textSize="15dp"
 
+                />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00ff0000"
+
+
+                        android:hint="아이디" />
+                </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="비밀번호"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/flexbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    app:flexWrap="wrap"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <Button
+                        android:id="@+id/button39"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/white"
+                        android:textSize="10dp"
+                        android:text="비밀번호를 잊어버리셨나요? >"
+                        android:fontFamily="@font/gmarketsansmedium"
+                        android:textColor="#999999" />
+                </com.google.android.flexbox.FlexboxLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/round_button_3"
+            android:backgroundTint="#777777"
+            android:fontFamily="@font/gmarketsansmedium"
+            android:text="완료"
+            android:textColor="#fff"
+            android:textSize="17dp"
+            android:layout_marginTop="410dp"
+
+            />
+    </LinearLayout>
 </LinearLayout>

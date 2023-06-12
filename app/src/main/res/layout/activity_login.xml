@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:gravity="bottom|center"
     android:orientation="vertical"
-    tools:context=".Login">
+    tools:context=".Login"
+    >
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -35,7 +36,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="0"
-                tools:srcCompat="@drawable/carrier" />
+                tools:srcCompat="@drawable/carrier"
+
+                />
 
             <LinearLayout
                 android:id="@+id/login_button_wrap"
@@ -51,105 +54,170 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:text="구글로 로그인"
-
-                    app:cornerRadius="16dp" />
+                    android:fontFamily="@font/gmarketsansmedium"
+                    app:cornerRadius="16dp"
+                    android:backgroundTint="#494949"
+                    android:textColor="#fff"
+                    android:background="@drawable/round_button_3"
+                    android:textSize="17dp"
+                    />
 
                 <Button
                     android:id="@+id/button37"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:text="아이디로 로그인"
-                    app:cornerRadius="16dp" />
+                    android:fontFamily="@font/gmarketsansmedium"
+                    app:cornerRadius="16dp"
+                    android:backgroundTint="#494949"
+                    android:textColor="#fff"
+                    android:background="@drawable/round_button_3"
+                    android:layout_marginTop="10dp"
+                    android:textSize="17dp"
+                    />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+
+                    >
 
                     <TextView
                         android:id="@+id/textView8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="아직 루민 회원이 아니신가요?" />
+                        android:layout_weight="0"
+                        android:text="아직 루민 회원이 아니신가요?"
+                        android:fontFamily="@font/gmarketsansmedium"
+
+                        />
 
                     <Button
-                        android:id="@+id/button38"
-                        android:layout_width="60dp"
+                        android:id="@+id/signup_button"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_weight="0"
                         android:background="#00ff0000"
                         android:minWidth="0dp"
                         android:minHeight="0dp"
-                        android:text="회원가입"
-                        android:textColor="@color/black" />
+                        android:text="회원가입>"
+                        android:textColor="#F28FA1"
+                        android:fontFamily="@font/gmarketsansmedium"
+
+                        />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="469dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
-            android:background="@color/white"
+            android:backgroundTint="#fff"
+            android:background="@drawable/round_button_3"
             android:orientation="vertical"
-            android:paddingLeft="20dp"
+
             android:paddingTop="20dp"
-            android:paddingBottom="100dp">
+            android:id="@+id/visible_page"
+            >
 
             <ImageButton
-                android:id="@+id/imageButton3"
+                android:id="@+id/cancel_button"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@color/black"></ImageButton>
-<!--                app:srcCompat="@drawable/x"-->
-
+                android:src="@drawable/x"
+                android:background="@color/white"
+                android:layout_marginLeft="10dp"
+                >
+            </ImageButton>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:paddingLeft="20dp">
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/gmarketsansmedium"
+
+                >
 
                 <CheckBox
                     android:id="@+id/checkBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="약관 전체 동의" />
+                    android:text="약관 전체 동의"
+                    android:fontFamily="@font/gmarketsansmedium"
+                    android:layout_marginTop="15dp"
+                    />
 
                 <CheckBox
                     android:id="@+id/checkBox2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="루민 이용약관 동의(필수)" />
+                    android:text="루민 이용약관 동의(필수)"
+                    android:fontFamily="@font/gmarketsansmedium"
+                    android:layout_marginTop="15dp"
+                    />
 
                 <CheckBox
                     android:id="@+id/checkBox6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="프로모션 정보 수신 동의(선택)" />
+                    android:text="프로모션 정보 수신 동의(선택)"
+                    android:fontFamily="@font/gmarketsansmedium"
+                    android:layout_marginTop="15dp"
+                    />
 
                 <CheckBox
                     android:id="@+id/checkBox4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="개인정보 제 3자 제공 동의(필수)" />
+                    android:text="개인정보 제 3자 제공 동의(필수)"
+                    android:fontFamily="@font/gmarketsansmedium"
+                    android:layout_marginTop="15dp"
+                    />
 
                 <CheckBox
                     android:id="@+id/checkBox5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="위치기반 서비스 이용약관 동의(선택)" />
+                    android:text="위치기반 서비스 이용약관 동의(선택)"
+                    android:fontFamily="@font/gmarketsansmedium"
+                    android:layout_marginTop="15dp"
+                    />
 
                 <CheckBox
                     android:id="@+id/checkBox3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="개인정보 수집 및 이용 동의(필수)" />
+                    android:text="개인정보 수집 및 이용 동의(필수)"
+                    android:fontFamily="@font/gmarketsansmedium"
+                    android:layout_marginTop="15dp"
+                    />
             </LinearLayout>
+            <Button
+                android:id="@+id/start_button"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:background="@drawable/round_button_3"
+                android:text="동의하고 계속하기"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/gmarketsansmedium"
+                android:backgroundTint="#494949"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="17dp"
+                android:layout_marginTop="30dp"
 
+                />
 
         </LinearLayout>
+
+
+
+
     </FrameLayout>
 
 </LinearLayout>

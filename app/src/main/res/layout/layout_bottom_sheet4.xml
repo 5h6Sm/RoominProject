@@ -68,7 +68,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="수단 선택"
+        android:text="도착 희망 위치"
         android:textColor="#A4A4A4"
         android:fontFamily="@font/gmarketsansmedium"
         android:layout_marginLeft="29dp"
@@ -78,49 +78,22 @@
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <CheckBox
-            android:fontFamily="@font/gmarketsansmedium"
-            android:id="@+id/toggleButton1"
-            android:layout_width="92dp"
-            android:layout_height="50dp"
-            android:text="룸전화"
-            android:textColor="#D1D1D1"
+        <EditText
+            android:id="@+id/textinput1"
+            android:padding="10dp"
+            android:gravity="top|left"
+            android:layout_gravity="center"
             android:background="@drawable/toggle_button_background"
-            android:padding="8dp"
-            android:layout_margin="8dp"
-            android:textSize="18sp"
-            android:radius="16dp"
-            android:gravity="center"
-            android:button="@null" />
-        <CheckBox
-            android:fontFamily="@font/gmarketsansmedium"
-            android:id="@+id/toggleButton2"
-            android:layout_width="92dp"
-            android:layout_height="50dp"
-            android:text="휴대폰"
-            android:textColor="#D1D1D1"
-            android:background="@drawable/toggle_button_background"
-            android:padding="8dp"
-            android:layout_margin="8dp"
-            android:textSize="18sp"
-            android:radius="16dp"
-            android:gravity="center"
-            android:button="@null" />
+            android:layout_width="312dp"
+            android:layout_height="100dp"
+            android:hint="예) 압구정역, 도쿄역"
+            android:textColorHint="#D1D1D1"
+            android:layout_marginTop="10dp"
+            android:textSize="14dp"
+            />
 
-        <CheckBox
-            android:fontFamily="@font/gmarketsansmedium"
-            android:id="@+id/toggleButton3"
-            android:layout_width="92dp"
-            android:layout_height="50dp"
-            android:text="룸노크"
-            android:textColor="#D1D1D1"
-            android:background="@drawable/toggle_button_background"
-            android:padding="8dp"
-            android:layout_margin="8dp"
-            android:textSize="18sp"
-            android:radius="16dp"
-            android:gravity="center"
-            android:button="@null" />
+
+
     </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
@@ -132,7 +105,7 @@
         android:layout_marginLeft="29dp"
         android:layout_marginTop="22dp"/>
     <EditText
-        android:id="@+id/textinput"
+        android:id="@+id/textinput2"
         android:padding="10dp"
         android:gravity="top|left"
         android:layout_gravity="center"
@@ -174,7 +147,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="28dp"
         android:textColor="#FBFBFB"
-        android:text="작성하기"
+        android:text="완료"
         android:textSize="16dp"
         android:fontFamily="@font/gmarketsansmedium"
         app:layout_constraintBottom_toBottomOf="parent"
