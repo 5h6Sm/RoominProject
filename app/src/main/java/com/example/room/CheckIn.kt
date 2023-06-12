@@ -1,23 +1,62 @@
 package com.example.room
 
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import androidx.viewpager2.adapter.FragmentStateAdapter
+import android.app.Activity
+import android.os.Bundle
+import android.util.Log
+import android.widget.FrameLayout
+import android.widget.ToggleButton
+import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager2.widget.ViewPager2
 import com.example.roomins.R
+import com.example.roomins.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.fragment.app.Fragment
+import androidx.viewbinding.ViewBinding
 
-private class CheckIn (fa: FragmentActivity) : FragmentStateAdapter(fa) {
-    override fun getItemCount(): Int = NUM_PAGES
 
-    override fun createFragment(position: Int): Fragment {
-        return when(position) {
-            0 -> ImageSlideFragment(R.drawable.slide_image1)
-            1 -> ImageSlideFragment(R.drawable.slide_image2)
-            else -> ImageSlideFragment(R.drawable.slide_image3)
+class CheckIn : Activity() {
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var navigationView: BottomNavigationView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.fragment_checkin)
+
+        navigationView.setOnItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.navigation_service -> {
+                    // 알림 탭을 선택한 경우 처리할 로직을 작성합니다.
+                    true
+                }
+                R.id.navigation_home -> {
+                    // 홈 탭을 선택한 경우 처리할 로직을 작성합니다.
+                    true
+                }
+                R.id.navigation_roomin -> {
+                    // 대시보드 탭을 선택한 경우 처리할 로직을 작성합니다.
+                    true
+                }
+                R.id.navigation_mypage -> {
+                    // 알림 탭을 선택한 경우 처리할 로직을 작성합니다.
+                    true
+                }
+                else -> false
+            }
         }
-    }
-    vp_slider = findViewById(R.id.vp_scroll_tutorial)
 
-    val pagerAdapter = ScreenSlidePagerAdapter(this)
-    vp_slider.adapter = pagerAdapter
+        // 선택되지 않은 아이콘 색상을 회색으로 지정합니다.
+        navigationView.itemIconTintList = resources.getColorStateList(R.color.bottom_nav_color)
+        Log.d("MY_TAG", "This is my log message")
+        navigationView.selectedItemId = R.id.navigation_home
+
+        initViewPager()
+    }
+
+    private fun initViewPager() {
+        val viewPager = findViewById<ViewPager2>(R.id.viewPager)
+        val viewPagerAdapter = ViewPagerAdapter(this)
+        viewPager.adapter = viewPagerAdapter
+    }
+
 
 }
