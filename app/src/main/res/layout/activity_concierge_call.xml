@@ -16,14 +16,19 @@
         android:paddingBottom="15dp">
 
         <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/service_intent"
+            android:layout_width="33dp"
+            android:layout_height="36dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/gmarketsansmedium"
+            android:scaleType="fitCenter"
+            android:src="@drawable/arrow2"
+            android:textColor="#777777"
+            android:textColorHint="#777777"
+            android:textSize="25dp"
             android:layout_gravity="center|left"
             android:layout_weight="0"
-            android:background="#00ff0000"
-            android:src="@drawable/arrow"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            />
 
         <TextView
             android:id="@+id/textView2"
@@ -55,7 +60,7 @@
         <LinearLayout
             android:layout_width="328dp"
             android:layout_height="68dp"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/backgroundtest"
             android:gravity="center">
 
@@ -64,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
                 android:fontFamily="@font/gmarketsansmedium"
-                android:text="도착지"
+                android:text="주요카테고리"
                 android:textColor="#494949"
                 android:textSize="16dp"
                 android:gravity="start" />
@@ -98,7 +103,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/backgroundtest"
             android:gravity="center"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="10dp"
             >
 
             <TextView
@@ -106,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
                 android:fontFamily="@font/gmarketsansmedium"
-                android:text="요청사항"
+                android:text="세부사항"
                 android:textColor="#494949"
                 android:textSize="16dp"
                 android:gravity="start" />
@@ -142,7 +147,7 @@
         android:layout_width="328dp"
         android:layout_height="68dp"
         android:layout_gravity="center"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="230dp"
         android:textColor="#FBFBFB"
         android:text="요청서 작성하기"
         android:textSize="16dp"
