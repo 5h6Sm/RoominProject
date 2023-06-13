@@ -1,5 +1,4 @@
 package com.example.roomins
-
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -8,18 +7,20 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.TextWatcher
 import android.text.style.ForegroundColorSpan
+import android.view.Gravity
+import android.view.LayoutInflater
+import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import kotlinx.coroutines.selects.select
 import java.util.*
 
 class ChoiceMinibar : AppCompatActivity() {
     private lateinit var timePicker: TimePicker
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_choice_call)
+        setContentView(R.layout.activity_choice_minibar)
         val button_select = findViewById<AppCompatButton>(R.id.button_select)
 
         button_select.setOnClickListener {
@@ -101,6 +102,24 @@ class ChoiceMinibar : AppCompatActivity() {
             }
             minute.setDisplayedValues(minuteDisplayedValues.toTypedArray())
 
+//            var counter:Int = 0 // 증감할 숫자의 변수 지정
+//            val tvcount = bottomSheetView.findViewById<TextView>(R.id.tv_count)
+//            val btnadd = bottomSheetView.findViewById<Button>(R.id.btn_add)
+//            val btnminus = bottomSheetView.findViewById<Button>(R.id.btn_minus)
+//
+//            btnadd.setOnClickListener {
+//                counter++
+//                tvcount.text = counter.toString()
+//            }
+//
+//            btnminus?.setOnClickListener {
+//                counter--
+//                tvcount.text = counter.toString()
+//            }
+
+//            val linear_layout1 = bottomSheetView.findViewById<LinearLayout>(R.id.linear_layout)
+//            linear_layout1.setVisibility(View.GONE);
+
             // 체크박스 선언 및 초기화
             val selectedTextView = bottomSheetView.findViewById<TextView>(R.id.selectedTextView)
             val checkBox1 = bottomSheetView.findViewById<CheckBox>(R.id.toggleButton1)
@@ -121,11 +140,22 @@ class ChoiceMinibar : AppCompatActivity() {
                 selectedTextView.text = newText
             }
 
+            // 부모 뷰 (LinearLayout)를 가져옵니다.
+            val parentLinearLayout = bottomSheetView.findViewById<LinearLayout>(R.id.parent)
+            parentLinearLayout.orientation = LinearLayout.VERTICAL
+            // 추가한 additionalView를 보여주고 숨기는 함수
+            fun toggleAdditionalView(checkBox: CheckBox, isVisible: Boolean) {
+                val additionalView = checkBox.tag as? View
+                additionalView?.visibility = if (isVisible) View.VISIBLE else View.GONE
+            }
             // 체크박스 클릭 시 이벤트 처리
             checkBox1.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) {
-                    checkBox1.setBackgroundResource(R.drawable.toggle_button_clicked)
+                    val additionalView = LayoutInflater.from(this).inflate(R.layout.additional_view, null)
+                    parentLinearLayout.addView(additionalView, LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT))
                     checkBox1.setTextColor(Color.parseColor("#FBFBFB"))
+                    checkBox1.setBackgroundResource(R.drawable.toggle_button_clicked)
+                    toggleAdditionalView(checkBox1, true)
                     val selectedText = checkBox1.text.toString()
                     appendSelectedText(selectedText)
                 } else {
@@ -136,6 +166,8 @@ class ChoiceMinibar : AppCompatActivity() {
 
             checkBox2.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) {
+                    val additionalView = LayoutInflater.from(this).inflate(R.layout.additional_view, null)
+                    parentLinearLayout.addView(additionalView, LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT))
                     checkBox2.setTextColor(Color.parseColor("#FBFBFB"))
                     checkBox2.setBackgroundResource(R.drawable.toggle_button_clicked)
                     val selectedText = checkBox2.text.toString()
@@ -148,6 +180,9 @@ class ChoiceMinibar : AppCompatActivity() {
 
             checkBox3.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) {
+                    // 추가한 요소를 부모 뷰에 추가합니다.
+                    val additionalView = LayoutInflater.from(this).inflate(R.layout.additional_view, null)
+                    parentLinearLayout.addView(additionalView, LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT))
                     checkBox3.setTextColor(Color.parseColor("#FBFBFB"))
                     checkBox3.setBackgroundResource(R.drawable.toggle_button_clicked)
                     val selectedText = checkBox3.text.toString()
@@ -251,26 +286,26 @@ class ChoiceMinibar : AppCompatActivity() {
                 } else {
                     "${selectedCheckBoxTexts.joinToString(", ")}"
                 }
-                Calling.text = newText
-                val userinput_edittext_boardwrite = bottomSheetView.findViewById<EditText>(R.id.textinput);
-                val wordcount_textview_boardwrite = bottomSheetView.findViewById<TextView>(R.id.textView)
-                userinput_edittext_boardwrite.addTextChangedListener(object: TextWatcher {
-
-                    override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                        wordcount_textview_boardwrite.text = "0 / 50"
-                    }
-
-                    override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                        var userinput = userinput_edittext_boardwrite.text.toString()
-                        wordcount_textview_boardwrite.text = userinput.length.toString() + " / 50"
-                    }
-
-                    override fun afterTextChanged(s: Editable?) {
-                        var userinput = userinput_edittext_boardwrite.text.toString()
-                        wordcount_textview_boardwrite.text = userinput.length.toString() + " / 50"
-                    }
-
-                })
+//                Calling.text = newText
+//                val userinput_edittext_boardwrite = bottomSheetView.findViewById<EditText>(R.id.textinput);
+//                val wordcount_textview_boardwrite = bottomSheetView.findViewById<TextView>(R.id.textView)
+//                userinput_edittext_boardwrite.addTextChangedListener(object: TextWatcher {
+//
+//                    override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+//                        wordcount_textview_boardwrite.text = "0 / 50"
+//                    }
+//
+//                    override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+//                        var userinput = userinput_edittext_boardwrite.text.toString()
+//                        wordcount_textview_boardwrite.text = userinput.length.toString() + " / 50"
+//                    }
+//
+//                    override fun afterTextChanged(s: Editable?) {
+//                        var userinput = userinput_edittext_boardwrite.text.toString()
+//                        wordcount_textview_boardwrite.text = userinput.length.toString() + " / 50"
+//                    }
+//
+//                })
 
                 bottomSheetDialog.dismiss() // 다이어로그 닫기
             }
