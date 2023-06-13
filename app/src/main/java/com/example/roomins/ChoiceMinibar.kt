@@ -19,7 +19,7 @@ class ChoiceMinibar : AppCompatActivity() {
     private lateinit var timePicker: TimePicker
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_choice_call)
+        setContentView(R.layout.activity_choice_minibar)
         val button_select = findViewById<AppCompatButton>(R.id.button_select)
 
         button_select.setOnClickListener {
@@ -216,6 +216,11 @@ class ChoiceMinibar : AppCompatActivity() {
             checkBox3.isPressed = false
             checkBox3.isDuplicateParentStateEnabled = false
 
+            var counter:Int = 0 // 증감할 숫자의 변수 지정
+            val tvcount = bottomSheetDialog.findViewById<Button>(R.id.tv_count);
+            val btnadd = bottomSheetDialog.findViewById<Button>(R.id.btn_add);
+            val btnminus = bottomSheetDialog.findViewById<Button>(R.id.btn_minus);
+
             intentbtn.setOnClickListener {
                 val selectedDay = day.displayedValues[day.value - 1]
                 val selectedHour = hour.displayedValues[hour.value - 1]
@@ -251,26 +256,26 @@ class ChoiceMinibar : AppCompatActivity() {
                 } else {
                     "${selectedCheckBoxTexts.joinToString(", ")}"
                 }
-                Calling.text = newText
-                val userinput_edittext_boardwrite = bottomSheetView.findViewById<EditText>(R.id.textinput);
-                val wordcount_textview_boardwrite = bottomSheetView.findViewById<TextView>(R.id.textView)
-                userinput_edittext_boardwrite.addTextChangedListener(object: TextWatcher {
-
-                    override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                        wordcount_textview_boardwrite.text = "0 / 50"
-                    }
-
-                    override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                        var userinput = userinput_edittext_boardwrite.text.toString()
-                        wordcount_textview_boardwrite.text = userinput.length.toString() + " / 50"
-                    }
-
-                    override fun afterTextChanged(s: Editable?) {
-                        var userinput = userinput_edittext_boardwrite.text.toString()
-                        wordcount_textview_boardwrite.text = userinput.length.toString() + " / 50"
-                    }
-
-                })
+//                Calling.text = newText
+//                val userinput_edittext_boardwrite = bottomSheetView.findViewById<EditText>(R.id.textinput);
+//                val wordcount_textview_boardwrite = bottomSheetView.findViewById<TextView>(R.id.textView)
+//                userinput_edittext_boardwrite.addTextChangedListener(object: TextWatcher {
+//
+//                    override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+//                        wordcount_textview_boardwrite.text = "0 / 50"
+//                    }
+//
+//                    override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+//                        var userinput = userinput_edittext_boardwrite.text.toString()
+//                        wordcount_textview_boardwrite.text = userinput.length.toString() + " / 50"
+//                    }
+//
+//                    override fun afterTextChanged(s: Editable?) {
+//                        var userinput = userinput_edittext_boardwrite.text.toString()
+//                        wordcount_textview_boardwrite.text = userinput.length.toString() + " / 50"
+//                    }
+//
+//                })
 
                 bottomSheetDialog.dismiss() // 다이어로그 닫기
             }
