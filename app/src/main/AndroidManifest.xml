@@ -13,7 +13,7 @@
         android:theme="@style/Theme.RoominS"
         tools:targetApi="31">
         <activity
-            android:name=".ConciergeCall"
+            android:name=".ChoiceMinibar"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ChoiceMinibar"
+            android:name=".ConciergeCall"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"

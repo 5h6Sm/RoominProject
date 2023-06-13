@@ -123,7 +123,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
             android:fontFamily="@font/gmarketsansmedium"
-            android:text="모닝콜 수단"
+            android:text="선택"
             android:textColor="#494949"
             android:textSize="16dp"
             android:gravity="start" />
@@ -180,6 +180,12 @@
             android:gravity="right"
             android:padding="7dp"/>
     </LinearLayout>
+    <View
+        android:layout_width="380dp"
+        android:layout_height="2dp"
+        android:layout_marginLeft="-360dp"
+        android:layout_marginTop="610dp"
+        android:background="#E8E8E8" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:background="@drawable/round_button_3"
@@ -188,7 +194,7 @@
         android:layout_height="68dp"
         android:layout_gravity="center_vertical"
         android:layout_marginTop="300dp"
-        android:layout_marginLeft="-332dp"
+        android:layout_marginLeft="-352dp"
         android:textColor="#FBFBFB"
         android:text="작성하기"
         android:textSize="16dp"
