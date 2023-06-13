@@ -256,19 +256,24 @@ class UmbrellaService : AppCompatActivity() {
                 }
                 if (checkBox3.isChecked) {
                     selectedCheckBoxTexts.add(checkBox3.text.toString())
+                    if(checkBox4.isChecked) selectedCheckBoxTexts.add(checkBox4.text.toString())
+                    if(checkBox5.isChecked) selectedCheckBoxTexts.add(checkBox5.text.toString())
+                    if(checkBox6.isChecked) selectedCheckBoxTexts.add(checkBox6.text.toString())
+                    if(checkBox7.isChecked) selectedCheckBoxTexts.add(checkBox7.text.toString())
+
                 }
-                if (checkBox4.isChecked) {
-                    selectedCheckBoxTexts.add(checkBox1.text.toString())
-                }
-                if (checkBox5.isChecked) {
-                    selectedCheckBoxTexts.add(checkBox2.text.toString())
-                }
-                if (checkBox6.isChecked) {
-                    selectedCheckBoxTexts.add(checkBox3.text.toString())
-                }
-                if (checkBox7.isChecked) {
-                    selectedCheckBoxTexts.add(checkBox3.text.toString())
-                }
+//                if (checkBox4.isChecked) {
+//                    selectedCheckBoxTexts.add(checkBox1.text.toString())
+//                }
+//                if (checkBox5.isChecked) {
+//                    selectedCheckBoxTexts.add(checkBox2.text.toString())
+//                }
+//                if (checkBox6.isChecked) {
+//                    selectedCheckBoxTexts.add(checkBox3.text.toString())
+//                }
+//                if (checkBox7.isChecked) {
+//                    selectedCheckBoxTexts.add(checkBox3.text.toString())
+//                }
 
                 val Calling = findViewById<TextView>(R.id.roomcalling)
 

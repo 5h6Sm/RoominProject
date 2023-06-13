@@ -1,13 +1,36 @@
 package com.example.roomins
 
+import android.content.Context
 import android.content.Intent
+import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.widget.AppCompatButton
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import org.w3c.dom.Text
+
+class CustomAdapter(context: Context, resource: Int, objects: Array<String>, private val fontPath: String) :
+    ArrayAdapter<String>(context, resource, objects) {
+
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        val view = super.getView(position, convertView, parent)
+        val textView = view.findViewById<TextView>(android.R.id.text1)
+        val typeface = Typeface.createFromAsset(context.assets, fontPath)
+        textView.typeface = typeface
+        return view
+    }
+
+    override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
+        val view = super.getDropDownView(position, convertView, parent)
+        val textView = view.findViewById<TextView>(android.R.id.text1)
+        val typeface = Typeface.createFromAsset(context.assets, fontPath)
+        textView.typeface = typeface
+        return view
+    }
+}
 
 class ConciergeCall : AppCompatActivity() {
     var dataArr = arrayOf("방키, 열쇠 분실", "소음공해 신고", "방 전등 고장", "신문, 잡지 제공", "기타")
@@ -39,7 +62,7 @@ class ConciergeCall : AppCompatActivity() {
             val comboBox = bottomSheetView.findViewById<Spinner>(R.id.comboBox)
             val result1 = findViewById<TextView>(R.id.show1)
 
-            val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, dataArr)
+            val adapter = AdapterView(this, android.R.layout.simple_spinner_dropdown_item, dataArr)
             comboBox.adapter = adapter
             comboBox.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
