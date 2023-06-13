@@ -60,26 +60,12 @@ android:text="인터넷"
     />
        <LinearLayout
            android:layout_width="300dp"
-           android:layout_height="60dp"
+           android:layout_height="20dp"
            android:orientation="horizontal"
            android:layout_gravity="center"
            android:gravity="center"
            android:id="@+id/button"
            >
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="방 비밀번호 요청"-->
-<!--                android:fontFamily="@font/gmarketsansmedium"-->
-<!--                android:textSize="17dp"-->
-<!--                />-->
-<!--           <ImageView-->
-<!--               android:layout_width="30dp"-->
-<!--               android:layout_height="20dp"-->
-<!--               android:scaleType="center"-->
-<!--               android:src="@drawable/down_arrow"-->
-<!--               android:layout_marginLeft="90dp"-->
-<!--               />-->
        </LinearLayout>
         <Spinner
             android:layout_width="300dp"
@@ -89,12 +75,39 @@ android:text="인터넷"
             android:layout_gravity="center"
 
             />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center|right"
+android:layout_marginTop="200dp"
+        android:layout_marginRight="50dp"
+        android:id="@+id/visible_layout"
+        >
         <TextView
-            android:layout_width="300dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="합계"
+            android:layout_gravity="center"
+            android:fontFamily="@font/gmarketsansmedium"
+            android:gravity="bottom"
+            android:layout_marginRight="10dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/result"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:textSize="20dp"
+            android:fontFamily="@font/gmarketsansbold"
             />
+
     </LinearLayout>
+
     <Button
         android:layout_width="350dp"
         android:layout_height="60dp"
@@ -103,8 +116,9 @@ android:text="인터넷"
         android:text="완료"
         android:fontFamily="@font/gmarketsansmedium"
         android:textColor="@color/white"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="20dp"
         android:textSize="17dp"
+        android:gravity="center"
         />
 
 
