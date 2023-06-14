@@ -62,7 +62,7 @@ class ConciergeCall : AppCompatActivity() {
             val comboBox = bottomSheetView.findViewById<Spinner>(R.id.comboBox)
             val result1 = findViewById<TextView>(R.id.show1)
 
-            val adapter = AdapterView(this, android.R.layout.simple_spinner_dropdown_item, dataArr)
+            val adapter = CustomAdapter(this, android.R.layout.simple_spinner_dropdown_item, dataArr, "fonts/gmarketsansmedium.otf")
             comboBox.adapter = adapter
             comboBox.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
