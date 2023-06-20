@@ -13,7 +13,7 @@
         android:theme="@style/Theme.RoominS"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.room.Check"
             android:exported="false">
 
             <meta-data
@@ -42,7 +42,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.example.room.Check"
+            android:name="MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

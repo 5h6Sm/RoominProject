@@ -149,7 +149,6 @@ class ChoiceCall : AppCompatActivity() {
                 }
             }
 
-
             // 다중 선택을 가능하도록 체크박스의 속성 변경
             checkBox1.isClickable = true
             checkBox1.isFocusable = true
