@@ -105,7 +105,6 @@
                 android:textColor="#A4A4A4" />
         </RadioGroup>
 
-
         <LinearLayout
             android:layout_marginTop="32dp"
             android:layout_width="380dp"
@@ -140,7 +139,7 @@
             android:layout_width="match_parent"
             android:layout_height="121dp"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:orientation="horizontal">
 

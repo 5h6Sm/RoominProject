@@ -11,23 +11,6 @@ import com.example.room.ImageSlideFragment1
 import com.example.room.ImageSlideFragment2
 import com.example.room.ImageSlideFragment3
 
-/*
-private const val NUM_PAGES = 3
-
-class ScreenSlidePageFragment : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View = inflater.inflate(R.layout.fragment_screen_slide_page, container, false)
-}
-class ScreenSlidePagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
-    override fun getCount(): Int = NUM_PAGES
-    override fun getItem(position: Int): Fragment = ScreenSlidePageFragment()
-}
-
- */
-
 class ScreenSlidePagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
     val fragmentList = listOf<Fragment>(ImageSlideFragment1(), ImageSlideFragment2(), ImageSlideFragment3())
     override fun getCount(): Int = 3
