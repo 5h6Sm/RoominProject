@@ -6,9 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".RegisteredHotel">
 
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,7 +79,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="bottom|center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+       >
+
 
         <LinearLayout
             android:layout_width="match_parent"
