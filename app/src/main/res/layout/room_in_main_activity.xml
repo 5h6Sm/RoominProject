@@ -25,22 +25,30 @@
     </RelativeLayout>
 
     <ScrollView
+        android:layout_alignTop="@android:id/accessibilityActionContextClick"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp">
+
         <LinearLayout
             android:id="@+id/fragment_container"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
         </LinearLayout>
     </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:background="#FFFFFF"
         android:id="@+id/navigation_view"
+        app:itemTextColor="#494949"
+        app:itemIconTint="#50000000"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
+        android:backgroundTint="#FFFFFF"
         app:menu="@menu/navigation_menu"
+        android:visibility="visible"
         app:labelVisibilityMode="labeled" />
 </RelativeLayout>

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.googlemaps">
-    <uses-permission android:name="android.permission.INTERNET"/>
-
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -14,17 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RoominS"
-        tools:targetApi="31"
-        android:usesCleartextTraffic="true"
-
-        >
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDVFriequcc1mHIt0Bg23aj3oT-4twyHPk"/>
-
+        tools:targetApi="31">
         <activity
-            android:name="com.example.roomins.MainActivity"
+            android:name=".MainActivity"
             android:exported="false">
 
             <meta-data
@@ -32,21 +21,21 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.example.roomins.IdLogin"
+            android:name=".IdLogin"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.example.roomins.Login"
+            android:name=".Login"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.example.roomins.ChoiceCall"
+            android:name=".ChoiceCall"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -60,49 +49,31 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.example.roomins.RegisteredHotelMap"
+            android:name=".HomeActivity"
             android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-
-        </activity>
-        <activity
-            android:name="com.example.roomins.RegisteredHotelInput"
-            android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-
-        </activity>
-
-
-        <activity
-            android:name="com.example.room.Passport"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity android:name="com.example.roomins.HomeActivity"
-            android:exported="true"
-            >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity android:name="com.example.roomins.SignUp"
-            android:exported="true"
-            >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".RegisteredHotelMap"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.room.Passport"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
     </application>
 
