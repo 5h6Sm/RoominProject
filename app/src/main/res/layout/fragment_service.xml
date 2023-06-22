@@ -117,7 +117,7 @@
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="393dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="16dp"
                         android:backgroundTint="#FBFBFB"
@@ -259,7 +259,7 @@
                                 android:layout_height="23dp"
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginLeft="20dp"
-                                android:src="@drawable/umb" />
+                                android:src="@drawable/interate" />
 
                             <TextView
                                 android:layout_width="69dp"
@@ -267,7 +267,7 @@
                                 android:layout_marginLeft="18dp"
                                 android:layout_gravity="center"
                                 android:fontFamily="@font/gmarketsansmedium"
-                                android:text="우산대여"
+                                android:text="인터넷"
                                 android:textSize="16dp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>

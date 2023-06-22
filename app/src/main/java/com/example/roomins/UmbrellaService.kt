@@ -16,13 +16,10 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.util.*
 
 class UmbrellaService : AppCompatActivity() {
-
+    private lateinit var timePicker: TimePicker
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_umbrella_service)
-
-
-
         val button_select = findViewById<AppCompatButton>(R.id.button_select)
 
         button_select.setOnClickListener {

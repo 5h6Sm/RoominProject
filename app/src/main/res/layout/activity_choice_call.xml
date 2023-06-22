@@ -22,19 +22,20 @@
         android:textSize="25dp" />
 
     <TextView
+        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="105dp"
         android:layout_marginTop="33dp"
         android:fontFamily="@font/gmarketsansmedium"
         android:text="모닝콜"
         android:textColor="#494949"
-        android:textSize="18dp" />
+        android:textSize="24dp" />
 
     <LinearLayout
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginLeft="-88dp"
+        android:layout_marginLeft="-100dp"
         android:layout_marginTop="130dp"
         android:orientation="horizontal"
         android:background="@drawable/backcall">
@@ -56,13 +57,13 @@
         android:fontFamily="@font/gmarketsansbold"
         android:text="모닝콜"
         android:textColor="#494949"
-        android:textSize="24dp" />
+        android:textSize="28dp" />
 
     <LinearLayout
         android:layout_width="78dp"
         android:layout_height="32dp"
         android:layout_gravity="center_vertical"
-        android:layout_marginTop="-68dp"
+        android:layout_marginTop="-100dp"
         android:layout_marginLeft="160dp"
         android:background="@drawable/backboxgray">
         <TextView
@@ -77,6 +78,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:gravity="center"
         android:layout_width="328dp"
         android:layout_height="68dp"
         android:layout_marginLeft="-325dp"
