@@ -25,9 +25,7 @@ interface Authentication {
     ): Call<Void>
 }
 
-
 class IdLogin : AppCompatActivity() {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,7 +55,7 @@ class IdLogin : AppCompatActivity() {
                 override fun onResponse(call: Call<Void>, response: Response<Void>) {
                     if (response.isSuccessful) {
                         // Authentication successful, move to the next screen
-                        val intent = Intent(this@IdLogin, HomeActivity::class.java)
+                        val intent = Intent(this@IdLogin, HomeFragment::class.java)
                         startActivity(intent)
                     } else {
                         // Authentication failed

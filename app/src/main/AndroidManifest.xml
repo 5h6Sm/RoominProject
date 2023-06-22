@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyDVFriequcc1mHIt0Bg23aj3oT-4twyHPk" />
+
 
     <application
         android:allowBackup="true"
@@ -17,15 +21,8 @@
         >
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".IdLogin"
             android:exported="true">
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -33,6 +30,14 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".IdLogin"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+
         </activity>
         <activity
             android:name=".Login"
@@ -55,13 +60,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".HomeActivity"
-            android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity android:name=".MyHotel"
             android:exported="true">
             <meta-data
@@ -90,6 +89,7 @@
             <meta-data
                 android:name="android.app.lib.name"
                 android:value=""/>
+
 
 
         </activity>
