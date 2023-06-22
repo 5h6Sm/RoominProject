@@ -1,5 +1,6 @@
 package com.example.roomins
 
+import android.app.Service
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -21,14 +22,15 @@ class ChoiceCall : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choice_call)
         val button_select = findViewById<AppCompatButton>(R.id.button_select)
+        var count = 0;
+
+        var serviceintent: ImageButton = findViewById(R.id.service_intent)
+        serviceintent.setOnClickListener{
+            val intent = Intent(this, ServiceFragment::class.java)
+            startActivity(intent)
+        }
 
         button_select.setOnClickListener {
-            var serviceintent:ImageButton = findViewById(R.id.service_intent)
-            serviceintent.setOnClickListener{
-                val intent = Intent(this, ServiceFragment::class.java)
-                startActivity(intent)
-            }
-
             // bottomSheetDialog 객체 생성
             val bottomSheetDialog = BottomSheetDialog(this)
             // layout_bottom_sheet 레이아웃을 뷰로 생성
@@ -224,6 +226,7 @@ class ChoiceCall : AppCompatActivity() {
                 val showtext = findViewById<TextView>(R.id.show)
                 showtext.text = input //입력한 값 전송하기
                 bottomSheetDialog.dismiss() // 다이어로그 닫기
+                count += 2
             }
         }
     }

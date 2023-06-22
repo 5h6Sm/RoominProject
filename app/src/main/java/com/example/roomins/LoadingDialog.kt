@@ -23,7 +23,7 @@ class LoadingDialog(context: Context) : Dialog(context) {
 
     override fun show() {
         super.show()
-        handler.postDelayed({ dismiss() }, 1500) // 2초 후에 dismiss() 실행
+        handler.postDelayed({ dismiss() }, 1000) // 2초 후에 dismiss() 실행
     }
 
     override fun dismiss() {

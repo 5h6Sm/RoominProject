@@ -111,6 +111,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@color/white"
                 android:hint="예약자 명"
+                android:id="@+id/name"
                 android:fontFamily="@font/gmarketsansmedium"
                 />
         </com.google.android.material.textfield.TextInputLayout>
@@ -123,6 +124,7 @@
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/white"
                 android:hint="전화번호"
+                android:id="@+id/phone_num"
                 android:fontFamily="@font/gmarketsansmedium"
 
                 />
@@ -135,6 +137,7 @@
         android:layout_gravity="center"
         android:background="@drawable/round_button_3"
         android:text="완료"
+        android:id="@+id/send"
         android:fontFamily="@font/gmarketsansmedium"
         android:textColor="#fff"
         android:layout_marginTop="180dp"

@@ -7,32 +7,33 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="83dp"
         android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/movemainpage"
-        android:layout_width="77dp"
-        android:layout_height="18dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="25dp"
-        android:src="@drawable/logoname" />
+        <ImageView
+            android:id="@+id/movemainpage"
+            android:layout_width="106dp"
+            android:layout_height="29dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/logocolor" />
 
-    <ImageView
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="270dp"
-        android:src="@drawable/alramnon" />
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/alramnon" />
     </LinearLayout>
 
     <RadioGroup
         android:checkedButton="@+id/offer"
         android:id="@+id/toggle"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
         android:layout_marginBottom="@dimen/margin_medium"
         android:layout_marginLeft="50dp"
+        android:layout_gravity="center"
         android:layout_marginRight="50dp"
         android:layout_marginTop="@dimen/margin_medium"
         android:background="@drawable/out_line"
@@ -71,29 +72,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="체크아웃"
-        android:layout_marginLeft="50dp"
-        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="28dp"
         android:textColor="@color/black"
         android:fontFamily="@font/gmarketsansbold">
     </TextView>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="400dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="150dp"
-            android:layout_height="88dp"
-            android:layout_marginLeft="50dp"
+            android:layout_gravity="center"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="10dp"
             android:backgroundTint="#FFFFFF"
             android:drawableBottom="@drawable/in_button_clock"
             android:text="시간 변경"
             android:textColor="@color/black"></Button>
 
         <Button
-            android:layout_width="150dp"
-            android:layout_height="88dp"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="12dp"
             android:backgroundTint="#FFFFFF"
             android:drawableBottom="@drawable/in_button_airplane"
@@ -104,14 +109,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="내 서비스 명세표"
-            android:paddingLeft="50dp"
-            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="28dp"
             android:textColor="@color/black"
             android:fontFamily="@font/gmarketsansbold"/>
         <LinearLayout
@@ -126,58 +132,63 @@
                 android:gravity="center"
                 android:text="2023.02.03 ~ 2023.02.17"
                 android:textColor="#494949"
-                android:textSize="16dp"
+                android:textSize="19dp"
                 android:fontFamily="@font/gmarketsansmedium"/>
             <LinearLayout
+                android:layout_marginTop="15dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="180dp"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
+                    android:textSize="17dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/gmarketsansmedium"
                     android:text="이용한 서비스"/>
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="350dp"
+                    android:layout_height="75dp"
                     android:orientation="horizontal">
                 <Button
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:background="@drawable/call" />
                 <Button
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:background="@drawable/drink" />
                 <Button
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:background="@drawable/meal" />
                 <Button
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:background="@drawable/bed" />
                 <Button
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:background="@drawable/umbrella2" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
+                    android:layout_marginTop="30dp"
                     android:orientation="horizontal">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#A4A4A4"
-                        android:textSize="14dp"
+                        android:textSize="18dp"
                         android:fontFamily="@font/gmarketsansmedium"
                         android:text="합계"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="20dp"
+                        android:textSize="25dp"
                         android:fontFamily="@font/gmarketsansbold"
                         android:textColor="#494949"
                         android:text="73,000원"/>
@@ -189,24 +200,25 @@
                 android:layout_marginRight="16dp"
                 android:layout_gravity="right"
                 android:text="2023.02.04 기준 환율"
-                android:textSize="12dp"
+                android:textSize="15dp"
                 android:fontFamily="@font/gmarketsansmedium"
                 android:textColor="#A4A4A4"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:orientation="horizontal"
         android:gravity="center">
         <Button
-            android:layout_width="131dp"
-            android:layout_height="48dp"
+            android:layout_width="150dp"
+            android:layout_height="65dp"
             android:background="@drawable/details" />
 
         <Button
-            android:layout_width="131dp"
-            android:layout_height="48dp"
+            android:layout_width="150dp"
+            android:layout_height="65dp"
             android:background="@drawable/payment" />
     </LinearLayout>
 
