@@ -93,6 +93,7 @@
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
+                    android:id="@+id/hotel_name"
                     android:background="@color/white"
                     android:hint="미등록"
                     android:gravity="right"
@@ -110,7 +111,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="호텔명"
+            android:text="호텔주소"
             android:layout_marginLeft="30dp"
             android:gravity="center"
             android:fontFamily="@font/gmarketsansmedium"
@@ -126,6 +127,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:background="@color/white"
+                android:id="@+id/hotel_address"
                 android:hint="미등록"
                 android:gravity="right"
                 android:layout_marginRight="30dp"
@@ -142,7 +144,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="호텔명"
+            android:text="숙박기간"
             android:layout_marginLeft="30dp"
             android:gravity="center"
             android:fontFamily="@font/gmarketsansmedium"
@@ -159,6 +161,7 @@
                 android:layout_gravity="right"
                 android:background="@color/white"
                 android:hint="미등록"
+                android:id="@+id/period"
                 android:gravity="right"
                 android:layout_marginRight="30dp"
                 android:fontFamily="@font/gmarketsansmedium"
@@ -174,7 +177,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="호텔명"
+            android:text="체크인"
             android:layout_marginLeft="30dp"
             android:gravity="center"
             android:fontFamily="@font/gmarketsansmedium"
@@ -190,7 +193,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:background="@color/white"
-                android:hint="미등록"
+                android:textSize="10dp"
+                android:id="@+id/checkin"
+                android:hint="체크인 완료 시 1, 아닐시 0"
                 android:gravity="right"
                 android:layout_marginRight="30dp"
                 android:fontFamily="@font/gmarketsansmedium"
@@ -206,7 +211,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="호텔명"
+            android:text="체크아웃"
+
             android:layout_marginLeft="30dp"
             android:gravity="center"
             android:fontFamily="@font/gmarketsansmedium"
@@ -222,7 +228,42 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:background="@color/white"
-                android:hint="미등록"
+                android:textSize="10dp"
+                android:hint="체크아웃 완료 시 1, 아닐시 0"
+                android:id="@+id/checkout"
+                android:gravity="right"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/gmarketsansmedium"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="아이디"
+
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:fontFamily="@font/gmarketsansmedium"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@color/white"
+                android:id="@+id/id"
                 android:gravity="right"
                 android:layout_marginRight="30dp"
                 android:fontFamily="@font/gmarketsansmedium"
@@ -235,7 +276,7 @@
         android:layout_gravity="center"
         android:background="@drawable/round_button_3"
         android:text="등록하기"
-        android:layout_marginTop="20dp"
+        android:id="@+id/hotel_btn"
         android:fontFamily="@font/gmarketsansmedium"
         android:textSize="17dp"
         android:textColor="#fff "
