@@ -68,23 +68,25 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#00ff0000"
+                        android:id="@+id/id"
 
 
                         android:hint="아이디" />
                 </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
-
-                >
-                <com.google.android.material.textfield.TextInputEditText
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:hint="비밀번호"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:id="@+id/password"
+                        android:hint="비밀번호"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.flexbox.FlexboxLayout
                     android:id="@+id/flexbox"
@@ -117,6 +119,7 @@
             android:backgroundTint="#777777"
             android:fontFamily="@font/gmarketsansmedium"
             android:text="완료"
+            android:id="@+id/login_button"
             android:textColor="#fff"
             android:textSize="17dp"
             android:layout_marginTop="410dp"

@@ -149,7 +149,7 @@
                                     android:layout_height="wrap_content">
 
                                     <ImageButton
-                                        android:id="@+id/button5"
+                                        android:id="@+id/myhotel"
                                         android:layout_width="160dp"
                                         android:layout_height="120dp"
                                         android:background="@drawable/round_button_3"

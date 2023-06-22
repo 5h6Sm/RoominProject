@@ -1,5 +1,6 @@
 package com.example.roomins
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -47,6 +48,13 @@ class HomeActivity : AppCompatActivity() {
         val qrCodeImageView: ImageView = findViewById(R.id.qr_back)
         val qrCodeBitmap = generateQRCode(qrCodeText, qrCodeWidth, qrCodeHeight)
         qrCodeImageView.setImageBitmap(qrCodeBitmap)
+
+        val hotel = findViewById<ImageButton>(R.id.myhotel)
+        hotel.setOnClickListener {
+            val intent = Intent(this@HomeActivity, RegisteredHotelInput::class.java)
+            startActivity(intent)
+        }
+
 
         qrCodeImageView.visibility = View.GONE
 

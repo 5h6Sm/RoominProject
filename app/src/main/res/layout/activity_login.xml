@@ -50,7 +50,6 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button36"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:text="구글로 로그인"
@@ -63,7 +62,7 @@
                     />
 
                 <Button
-                    android:id="@+id/button37"
+                    android:id="@+id/idlogin"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:text="아이디로 로그인"
@@ -201,6 +200,7 @@
                 android:id="@+id/start_button"
                 android:layout_width="350dp"
                 android:layout_height="60dp"
+
                 android:background="@drawable/round_button_3"
                 android:text="동의하고 계속하기"
                 android:layout_marginBottom="20dp"
