@@ -15,6 +15,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
+import com.example.roomins.HomeFragment
+
 
 interface Authentication {
     @FormUrlEncoded
@@ -45,7 +47,7 @@ class IdLogin : AppCompatActivity() {
 
             // Example usage of Retrofit:
             val retrofit = Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:3000") // Update with your API endpoint
+                .baseUrl("http://192.168.0.37:3000/") // Update with your API endpoint
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
 
@@ -58,8 +60,13 @@ class IdLogin : AppCompatActivity() {
                         val intent = Intent(this@IdLogin, HomeFragment::class.java)
                         startActivity(intent)
                     } else {
-                        // Authentication failed
-                        Log.d("mytag", "Authentication failed")
+                        if (response.code() == 401) {
+                            // Authentication failed
+                            Log.d("mytag", "Invalid ID or password")
+                        } else {
+                            // Handle other error cases
+                            Log.d("mytag", "Authentication request failed")
+                        }
                     }
                 }
 
@@ -68,6 +75,7 @@ class IdLogin : AppCompatActivity() {
                     Log.d("mytag", "Authentication request failed")
                 }
             })
+
         }
     }
 }

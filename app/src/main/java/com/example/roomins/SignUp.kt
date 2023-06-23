@@ -1,5 +1,6 @@
 package com.example.roomins
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -37,8 +38,9 @@ class SignUp : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
+
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://10.0.2.2:3000") // Replace with your Node.js server URL
+            .baseUrl("http://192.168.0.37:3000") // Replace with your Node.js server URL
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
@@ -78,8 +80,10 @@ class SignUp : AppCompatActivity() {
                     Log.d("mytag", "Connection failed: ${t.message}")
                 }
             })
-
+            val intent = Intent(this@SignUp, HomeActivity::class.java)
+            startActivity(intent)
 
         }
     }
+
 }

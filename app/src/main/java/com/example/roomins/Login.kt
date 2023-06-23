@@ -23,8 +23,16 @@ class Login : AppCompatActivity() {
         button = findViewById(R.id.signup_button)
         cancelButton = findViewById(R.id.cancel_button)
 
+        var idlogin = findViewById<Button>(R.id.idlogin)
+
+
 
         linearLayout.visibility = View.GONE
+
+        idlogin.setOnClickListener {
+            val intent = Intent(this, IdLogin::class.java)
+            startActivity(intent)
+        }
 
         button.setOnClickListener {
             linearLayout.visibility = View.VISIBLE
@@ -32,8 +40,8 @@ class Login : AppCompatActivity() {
         cancelButton.setOnClickListener {
             linearLayout.visibility = View.GONE
         }
-        startButton.setOnClickListener({
-            val intent = Intent(this, IdLogin::class.java)
+        button.setOnClickListener({
+            val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
 
         })
